@@ -227,7 +227,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="frame-rate" range="1-30" />
             <Feature name="adaptive-playback" />
             <Feature name="secure-playback" required="true" />
-            <Limit name="concurrent-instances" max="6" />
+            <Limit name="concurrent-instances" max="3" />
             <Limit name="performance-point-3840x2160" value="60" />
         </MediaCodec>
         <MediaCodec name="OMX.qcom.video.decoder.mpeg4" type="video/mp4v-es" >
@@ -267,7 +267,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="frame-rate" range="1-30" />
             <Feature name="adaptive-playback" />
             <Feature name="secure-playback" required="true" />
-            <Limit name="concurrent-instances" max="6" />
+            <Limit name="concurrent-instances" max="3" />
             <Limit name="performance-point-1920x1088" value="30" />
         </MediaCodec>
         <MediaCodec name="OMX.qcom.video.decoder.h263" type="video/3gpp" >
@@ -320,7 +320,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="frame-rate" range="1-30" />
             <Feature name="adaptive-playback" />
             <Feature name="secure-playback" required="true" />
-            <Limit name="concurrent-instances" max="6" />
+            <Limit name="concurrent-instances" max="3" />
             <Limit name="performance-point-3840x2160" value="60" />
         </MediaCodec>
         <MediaCodec name="OMX.qcom.video.decoder.hevc" type="video/hevc" >
@@ -347,7 +347,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="frame-rate" range="1-30" />
             <Feature name="adaptive-playback" />
             <Feature name="secure-playback" required="true" />
-            <Limit name="concurrent-instances" max="6" />
+            <Limit name="concurrent-instances" max="3" />
             <Limit name="performance-point-3840x2160" value="60" />
         </MediaCodec>
         <MediaCodec name="OMX.google.opus.decoder" type="audio/opus" update="true" rank="100"/>
