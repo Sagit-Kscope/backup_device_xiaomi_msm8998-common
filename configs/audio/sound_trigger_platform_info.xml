@@ -40,6 +40,7 @@
         <param backend_port_name="SLIM_0_TX" />
         <!-- Param used to match and obtain device backend index -->
         <param backend_dai_name="SLIMBUS_0_TX" />
+        <param concurrent_capture="true" />
     </common_config>
     <acdb_ids>
         <param DEVICE_HANDSET_MIC_APE="100" />
