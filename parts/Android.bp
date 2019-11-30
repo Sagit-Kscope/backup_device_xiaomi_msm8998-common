@@ -25,6 +25,8 @@ android_app {
     privileged: true,
     resource_dirs: ["res"],
 
+    dxflags: ["--multi-dex"],
+
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
