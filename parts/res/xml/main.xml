@@ -68,6 +68,7 @@
             android:icon="@drawable/ic_vibrate"
             android:key="s2s_vib_strength"
             android:title="@string/s2s_vib_strength_title_head"
+            android:dependency="sweep2sleep"
             android:max="90"
             android:min="0"
             android:defaultValue="20"/>

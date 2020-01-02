@@ -24,6 +24,8 @@ import android.os.Vibrator;
 import android.util.AttributeSet;
 import android.widget.SeekBar;
 
+import androidx.preference.Preference;
+
 import org.omnirom.device.utils.FileUtils;
 
 public final class S2SVibratorStrengthPreference extends SeekBarPreferenceCham {
@@ -91,5 +93,11 @@ public final class S2SVibratorStrengthPreference extends SeekBarPreferenceCham {
         int progress = seekBar.getProgress();
         FEATURE.applyValue(progress + VIB_STRENGTH_MIN);
         if (progress != 0) mVibrator.vibrate(progress);
+    }
+    
+    @Override
+    public void onDependencyChanged(Preference dependency, boolean disableDependent) {
+        if (disableDependent != isVisible())
+            setVisible(disableDependent);
     }
 }

@@ -76,6 +76,10 @@ public final class SweepToSleepPreference extends ListPreference implements
         if (FEATURE.applyValue(strValue))
             FEATURE.applySharedPreferences(strValue, getSharedPreferences());
 
+        // Show vibrator preference if sweep turned on
+        boolean isON = !strValue.equals(S2S_DEFAULT);
+        notifyDependencyChange(isON);
+
         return true;
     }
 }
