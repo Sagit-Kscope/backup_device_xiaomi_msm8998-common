@@ -88,7 +88,7 @@ public final class DeviceSettings extends PreferenceFragment {
         try {
             pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
             return true;
-        } catch (PackageManager.NameNotFoundException e) {
+        } catch (PackageManager.NameNotFoundException ignored) {
         }
         return false;
     }
