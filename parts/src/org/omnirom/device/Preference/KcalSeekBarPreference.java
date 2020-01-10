@@ -1,15 +1,11 @@
 package org.omnirom.device.Preference;
 
 import android.content.Context;
-import android.graphics.PixelFormat;
 import android.util.AttributeSet;
-import android.view.WindowManager;
 
-import org.omnirom.device.R;
 import org.omnirom.device.utils.UtilsKCAL;
 
 public final class KcalSeekBarPreference extends SeekBarPreferenceCham {
-
 
     public KcalSeekBarPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
