@@ -18,6 +18,7 @@
 
 package org.omnirom.device.Preference;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.SystemProperties;
@@ -27,10 +28,22 @@ import android.util.AttributeSet;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 
+import org.omnirom.device.R;
+import org.omnirom.device.SpectrumTileService;
+
 public final class SpectrumPreference extends ListPreference implements
         Preference.OnPreferenceChangeListener {
 
+    /**
+     * A boolean value stored in sp indicates that the user has tried the new qs tile or not.
+     *
+     * @see     SpectrumPreference#onClick()
+     * @see     SpectrumTileService#onTileAdded()
+     * */
+    public static final String SPECTRUM_PREFERENCE_ADD_QS_TILE = "spec_qs";
+
     public static final String SPECTRUM_KEY = "spectrum";
+
     private static final String SPECTRUM_DEFAULT_PROFILE = "0";
     private static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
 
@@ -78,5 +91,24 @@ public final class SpectrumPreference extends ListPreference implements
             FEATURE.applySharedPreferences(value, getSharedPreferences());
 
         return true;
+    }
+
+    @Override
+    protected void onClick() {
+        SharedPreferences sp = getSharedPreferences();
+
+        boolean showPrompts = sp.getBoolean(SPECTRUM_PREFERENCE_ADD_QS_TILE, true);
+        if (showPrompts) {
+            new AlertDialog.Builder(getContext())
+                    .setTitle(R.string.specturm_qs_prompt_title)
+                    .setMessage(R.string.specturm_qs_prompt_text)
+                    .setPositiveButton(R.string.app_confirm, (dialog, which) -> {
+                        sp.edit().putBoolean(SPECTRUM_PREFERENCE_ADD_QS_TILE,false).apply();
+                        dialog.dismiss();
+                        super.onClick();
+                    }).show();
+        } else {
+            super.onClick();
+        }
     }
 }
