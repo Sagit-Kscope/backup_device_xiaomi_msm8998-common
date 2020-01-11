@@ -16,6 +16,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Advanced Setting</string>
+    <string name="app_confirm">OK</string>
     <string name="advanced_settings">Advanced Setting</string>
     <string name="advanced_settings_summary">Advanced</string>
 
@@ -47,6 +48,10 @@
     <string name="spectrum_summary">Choose your kernel profile</string>
     <string name="spectrum_dialogTitle">Choose your kernel profile</string>
 
+    <!-- Spectrum QS tile -->
+    <string name="specturm_qs_prompt_title">A QS title is available now.</string>
+    <string name="specturm_qs_prompt_text">You can switch the kernel profile more quickly and easily by adding the spectrum tile to QS settings.</string>
+    
     <!-- Swap HW buttons -->
     <string name="hw_buttons_title">Hardware buttons</string>
     <string name="swap_hw_buttons_title">Swap buttons</string>

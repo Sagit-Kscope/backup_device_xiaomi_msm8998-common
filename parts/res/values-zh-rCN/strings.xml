@@ -46,6 +46,10 @@
     <string name="spectrum_title">CPU 运行模式</string>
     <string name="spectrum_summary">选择 CPU 运行模式</string>
     <string name="spectrum_dialogTitle">选择 CPU 运行模式</string>
+
+    <!-- Spectrum QS tile -->
+    <string name="specturm_qs_prompt_title">快捷设置现在可用</string>
+    <string name="specturm_qs_prompt_text">通过将spectrum 添加到快捷设置，可以更快速地切换CPU 模式.</string>
     
     <!-- Swap HW buttons -->
     <string name="hw_buttons_title">实体按键</string>
