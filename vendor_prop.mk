@@ -193,6 +193,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_ODM_PROPERTIES += \
     ro.vendor.qti.va_odm.support=1
 
+# Perf
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.extension_library=libqti-perfd-client.so
+
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ims.disableADBLogs=1 \
