@@ -16,6 +16,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Advanced Setting</string>
+    <string name="app_feature_unsupported">Unsupported System</string>
     <string name="advanced_settings">Advanced Setting</string>
     <string name="advanced_settings_summary">Advanced</string>
 

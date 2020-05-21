@@ -22,7 +22,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.SystemProperties;
-import android.text.TextUtils;
 import android.util.AttributeSet;
 
 import androidx.preference.ListPreference;
@@ -30,6 +29,8 @@ import androidx.preference.Preference;
 
 import org.omnirom.device.R;
 import org.omnirom.device.SpectrumTileService;
+
+import java.io.File;
 
 public final class SpectrumPreference extends ListPreference implements
         Preference.OnPreferenceChangeListener {
@@ -47,11 +48,13 @@ public final class SpectrumPreference extends ListPreference implements
     static final String SPECTRUM_DEFAULT_PROFILE = "0";
     static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
 
+    static final File SPECTRUM_INIT_FILE = new File("/vendor/etc/init/init.spectrum.rc");
+    
     public static final KernelFeature<String> FEATURE = new KernelFeature<String>() {
 
         @Override
         public boolean isSupported() {
-            return !TextUtils.isEmpty(SystemProperties.get(SPECTRUM_SYSTEM_PROPERTY, null));
+            return SPECTRUM_INIT_FILE.exists();
         }
 
         @Override
