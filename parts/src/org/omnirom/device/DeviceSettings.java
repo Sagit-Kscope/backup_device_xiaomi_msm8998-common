@@ -55,13 +55,11 @@ public final class DeviceSettings extends PreferenceFragment {
 
         ButtonSwapPreference mButtonSwap = (ButtonSwapPreference) prefSet.findPreference(BUTTONS_SWAP_KEY);
         FastChargePreference mFastCharge = (FastChargePreference) findPreference(USB_FAST_CHARGE_KEY);
-        SpectrumSwitchPreference mSpectrum = (SpectrumSwitchPreference) findPreference(SpectrumSwitchPreference.PREFERENCE_KEY);
         SweepToSleepPreference mSweep = (SweepToSleepPreference) findPreference(S2S_KEY);
         S2SVibratorStrengthPreference mVibratorStrengthS2S = (S2SVibratorStrengthPreference) findPreference(KEY_S2S_VIBSTRENGTH);
 
         mButtonSwap.setEnabled(ButtonSwapPreference.FEATURE.isSupported());
         mFastCharge.setEnabled(FastChargePreference.FEATURE.isSupported());
-        mSpectrum.setEnabled(SpectrumSwitchPreference.FEATURE.isSupported());
         mSweep.setEnabled(SweepToSleepPreference.FEATURE.isSupported());
         mVibratorStrengthS2S.setEnabled(S2SVibratorStrengthPreference.FEATURE.isSupported());
 

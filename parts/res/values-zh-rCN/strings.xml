@@ -16,6 +16,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">高级设置</string>
+    <string name="app_feature_unsupported">不支持的系统</string>
     <string name="advanced_settings">高级设置</string>
     <string name="advanced_settings_summary">色彩校准、CPU 运行模式、滑动休眠</string>
 

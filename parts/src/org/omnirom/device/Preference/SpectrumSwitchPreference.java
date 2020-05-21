@@ -8,7 +8,8 @@ import android.util.AttributeSet;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
 
-import static org.omnirom.device.Preference.SpectrumPreference.SPECTRUM_DEFAULT_PROFILE;
+import org.omnirom.device.R;
+
 import static org.omnirom.device.Preference.SpectrumPreference.SPECTRUM_SYSTEM_PROPERTY;
 
 public final class SpectrumSwitchPreference extends SwitchPreference implements
@@ -56,6 +57,10 @@ public final class SpectrumSwitchPreference extends SwitchPreference implements
     public SpectrumSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         setOnPreferenceChangeListener(this);
+        if (!FEATURE.isSupported()) {
+            setEnabled(false);
+            setSummary(context.getString(R.string.app_feature_unsupported));
+        }
     }
 
     @Override
