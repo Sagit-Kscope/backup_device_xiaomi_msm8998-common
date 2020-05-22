@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="image_kcal_height">225dp</dimen>
+    <dimen name="image_kcal_padding_vertical">8dp</dimen>
 
     <!-- SeekBarPreferenceCham: offset of the value popup -->
     <dimen name="seek_bar_preference_cham_value_x_offset">0dp</dimen>

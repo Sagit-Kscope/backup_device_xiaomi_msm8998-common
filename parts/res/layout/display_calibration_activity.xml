@@ -7,8 +7,10 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/image_kcal_height"
+        android:layout_height="wrap_content"
         android:src="@drawable/reference_map"
+        android:paddingTop="@dimen/image_kcal_padding_vertical"
+        android:paddingBottom="@dimen/image_kcal_padding_vertical"
         tools:ignore="ContentDescription" />
 
     <fragment android:id="@+id/content"
