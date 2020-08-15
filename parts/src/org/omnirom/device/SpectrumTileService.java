@@ -52,12 +52,11 @@ public final class SpectrumTileService extends TileService {
         super.onStartListening();
         mTile = getQsTile();
         mTile.setIcon(Icon.createWithResource(this, R.drawable.ic_spectrum));
+        oldProfile = getCurrentProfile();
 
-        if (!SpectrumSwitchPreference.isEnabled(sp)) {
+        if (oldProfile == -1 || !SpectrumSwitchPreference.isEnabled(sp)) {
             mTile.setState(Tile.STATE_UNAVAILABLE);
-            mTile.updateTile();
         } else {
-            oldProfile = getCurrentProfile();
             mTile.setState(Tile.STATE_ACTIVE);
             mTile.setLabel(profiles[oldProfile]);
         }
@@ -89,6 +88,10 @@ public final class SpectrumTileService extends TileService {
     }
 
     private int getCurrentProfile() {
-        return Integer.parseInt(FEATURE.getCurrentValue());
+        try {
+            return Integer.parseInt(FEATURE.getCurrentValue());
+        } catch (NumberFormatException ignored) {
+            return -1;
+        }
     }
 }
