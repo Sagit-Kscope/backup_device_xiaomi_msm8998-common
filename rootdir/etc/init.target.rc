@@ -137,6 +137,9 @@ on init
     write /sys/module/lpm_levels/system/perf/perf-l2-dynret/idle_enabled N
     write /sys/module/lpm_levels/system/perf/perf-l2-ret/idle_enabled N
 
+    # Freezer setup
+    write /dev/freezer/frozen/freezer.killable 1
+
     # Create camera daemon cpusets
     mkdir /dev/cpuset/camera-daemon 0750 cameraserver cameraserver
     write /dev/cpuset/camera-daemon/cpus 0
