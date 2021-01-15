@@ -14,19 +14,19 @@
      limitations under the License.
 -->
 
-<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
-    <androidx.preference.PreferenceCategory
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
         android:key="display"
         android:title="@string/display_title">
 
-        <androidx.preference.Preference
+        <Preference
             android:fragment="org.omnirom.device.DisplayCalibration"
             android:icon="@drawable/ic_kcal"
             android:key="kcal"
             android:summary="@string/kcal_summary"
             android:title="@string/kcal_title" />
 
-        <androidx.preference.Preference
+        <Preference
             android:icon="@drawable/ic_doze"
             android:key="device_doze"
             android:persistent="false"
@@ -35,11 +35,10 @@
                 android:action="android.intent.action.MAIN"
                 android:targetClass="org.lineageos.settings.doze.DozeSettingsActivity"
                 android:targetPackage="org.lineageos.settings.doze" />
-        </androidx.preference.Preference>
-    </androidx.preference.PreferenceCategory>
+        </Preference>
+    </PreferenceCategory>
 
-    <androidx.preference.PreferenceCategory
-        android:title="@string/spectrum_profile_title">
+    <PreferenceCategory android:title="@string/spectrum_profile_title">
 
         <org.omnirom.device.Preference.SpectrumSwitchPreference
             android:defaultValue="true"
@@ -50,17 +49,17 @@
 
         <org.omnirom.device.Preference.SpectrumPreference
             android:defaultValue="0"
+            android:dependency="pref_spectrum_enabled"
             android:dialogTitle="@string/spectrum_summary"
             android:entries="@array/spectrum_profiles"
             android:entryValues="@array/spectrum_values"
             android:icon="@drawable/ic_kernel"
             android:key="spectrum"
             android:summary="@string/spectrum_summary"
-            android:title="@string/spectrum_title"
-            android:dependency="pref_spectrum_enabled"/>
-    </androidx.preference.PreferenceCategory>
+            android:title="@string/spectrum_title" />
+    </PreferenceCategory>
 
-    <androidx.preference.PreferenceCategory android:title="@string/s2s_title">
+    <PreferenceCategory android:title="@string/s2s_title">
 
         <org.omnirom.device.Preference.SweepToSleepPreference
             android:defaultValue="0"
@@ -72,16 +71,16 @@
             android:title="@string/s2s_title_head" />
 
         <org.omnirom.device.Preference.S2SVibratorStrengthPreference
+            android:defaultValue="20"
+            android:dependency="sweep2sleep"
             android:icon="@drawable/ic_vibrate"
             android:key="s2s_vib_strength"
-            android:title="@string/s2s_vib_strength_title_head"
-            android:dependency="sweep2sleep"
             android:max="90"
             android:min="0"
-            android:defaultValue="20"/>
-    </androidx.preference.PreferenceCategory>
+            android:title="@string/s2s_vib_strength_title_head" />
+    </PreferenceCategory>
 
-    <androidx.preference.PreferenceCategory
+    <PreferenceCategory
         android:key="hw_buttons"
         android:title="@string/hw_buttons_title">
 
@@ -101,9 +100,9 @@
             android:max="255"
             android:min="0"
             android:defaultValue="255"/>
-    </androidx.preference.PreferenceCategory>
+    </PreferenceCategory>
 
-    <androidx.preference.PreferenceCategory
+    <PreferenceCategory
         android:key="usb_fastcharge"
         android:title="@string/usb_fastcharge_title">
 
@@ -113,12 +112,11 @@
             android:key="fastcharge"
             android:summary="@string/fastcharge_summary"
             android:title="@string/fastcharge_title" />
-    </androidx.preference.PreferenceCategory>
+    </PreferenceCategory>
 
-    <androidx.preference.PreferenceCategory
-        android:title="@string/sound_title">
+    <PreferenceCategory android:title="@string/sound_title">
 
-        <androidx.preference.Preference
+        <Preference
             android:icon="@drawable/ic_dirac"
             android:key="xiaomi_dirac"
             android:persistent="true"
@@ -128,7 +126,7 @@
                 android:action="android.intent.action.MAIN"
                 android:targetClass="org.xiaomi.dirac.dirac.DiracActivity"
                 android:targetPackage="org.xiaomi.dirac" />
-        </androidx.preference.Preference>
-    </androidx.preference.PreferenceCategory>
+        </Preference>
+    </PreferenceCategory>
 
-</androidx.preference.PreferenceScreen>
+</PreferenceScreen>

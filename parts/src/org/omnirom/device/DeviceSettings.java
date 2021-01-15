@@ -49,7 +49,7 @@ public final class DeviceSettings extends PreferenceFragment {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.main, rootKey);
+        setPreferencesFromResource(R.xml.device_settings, rootKey);
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
