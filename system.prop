@@ -96,6 +96,9 @@ ro.telephony.call_ring.multiple=false
 ro.telephony.default_network=22,20
 telephony.lteOnCdmaDevice=1
 
+# Seamless transfer
+sys.fflag.override.settings_seamless_transfer=true
+
 # SurfaceFlinger
 ro.launcher.blur.appLaunch=0
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
