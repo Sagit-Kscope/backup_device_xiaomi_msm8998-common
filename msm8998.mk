@@ -103,8 +103,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio@7.1-impl \
     android.hardware.audio@7.1-util \
-    android.hardware.audio@2.0-service \
-    android.hardware.soundtrigger@2.2-impl
+    android.hardware.audio@2.0-service
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
@@ -512,3 +511,4 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/msm8998-common/msm8998-common-vendor.mk)
+$(call inherit-product, vendor/xiaomi/msm8998-common/google/google.mk)
