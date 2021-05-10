@@ -31,7 +31,7 @@ public final class SweepToSleepPreference extends ListPreference implements
         Preference.OnPreferenceChangeListener {
 
     public static final String S2S_KEY = "sweep2sleep";
-    public static final String S2S_DEFAULT = "0";
+    private static final String S2S_DEFAULT = "0";
     private static final String FILE_S2S_TYPE = "/sys/sweep2sleep/sweep2sleep";
 
     public static final KernelFeature<String> FEATURE = new KernelFeature<String>() {
@@ -67,7 +67,11 @@ public final class SweepToSleepPreference extends ListPreference implements
 
     public SweepToSleepPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setOnPreferenceChangeListener(this);
+        if (FEATURE.isSupported()) {
+            setOnPreferenceChangeListener(this);
+        } else {
+            setEnabled(false);
+        }
     }
 
     @Override

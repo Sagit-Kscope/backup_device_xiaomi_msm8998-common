@@ -74,8 +74,12 @@ public final class S2SVibratorStrengthPreference extends SeekBarPreferenceCham {
 
     public S2SVibratorStrengthPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        setProgress(FEATURE.getCurrentValue());
+        if (FEATURE.isSupported()) {
+            mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+            setProgress(FEATURE.getCurrentValue());
+        } else {
+            setEnabled(false);
+        }
     }
 
     @Override

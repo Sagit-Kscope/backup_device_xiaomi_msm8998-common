@@ -32,8 +32,8 @@ public final class FastChargePreference extends SwitchPreference
         implements Preference.OnPreferenceChangeListener {
 
     public static final String USB_FAST_CHARGE_KEY = "fastcharge";
-    public static final String USB_FAST_CHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
-    public static final boolean USB_FAST_CHARGE_DEFAULT = false;
+    private static final String USB_FAST_CHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
+    private static final boolean USB_FAST_CHARGE_DEFAULT = false;
 
     public static final KernelFeature<Boolean> FEATURE = new KernelFeature<Boolean>() {
 
@@ -68,7 +68,11 @@ public final class FastChargePreference extends SwitchPreference
 
     public FastChargePreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setOnPreferenceChangeListener(this);
+        if (FEATURE.isSupported()) {
+            setOnPreferenceChangeListener(this);
+        } else {
+            setEnabled(false);
+        }
     }
 
     @Override
