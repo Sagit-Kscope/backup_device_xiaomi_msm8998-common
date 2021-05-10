@@ -27,6 +27,7 @@ import android.widget.SeekBar;
 import androidx.preference.Preference;
 
 import org.omnirom.device.utils.FileUtils;
+import org.omnirom.device.Preference.SweepToSleepPreference;
 
 public final class S2SVibratorStrengthPreference extends SeekBarPreferenceCham {
 
@@ -97,7 +98,6 @@ public final class S2SVibratorStrengthPreference extends SeekBarPreferenceCham {
     
     @Override
     public void onDependencyChanged(Preference dependency, boolean disableDependent) {
-        if (disableDependent != isVisible())
-            setVisible(disableDependent);
+        setVisible(SweepToSleepPreference.isEnabled(getSharedPreferences()));
     }
 }

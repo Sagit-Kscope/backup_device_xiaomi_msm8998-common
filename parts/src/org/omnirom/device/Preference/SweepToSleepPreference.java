@@ -73,13 +73,13 @@ public final class SweepToSleepPreference extends ListPreference implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         String strValue = newValue.toString();
-        if (FEATURE.applyValue(strValue))
+        if (FEATURE.applyValue(strValue)) {
             FEATURE.applySharedPreferences(strValue, getSharedPreferences());
-
-        // Show vibrator preference if sweep turned on
-        boolean isON = !strValue.equals(S2S_DEFAULT);
-        notifyDependencyChange(isON);
-
+            notifyDependencyChange(false /* ignored */);
+        }
         return true;
+    }
+    public static boolean isEnabled(SharedPreferences sp) {
+        return !sp.getString(S2S_KEY, S2S_DEFAULT).equals(S2S_DEFAULT);
     }
 }
