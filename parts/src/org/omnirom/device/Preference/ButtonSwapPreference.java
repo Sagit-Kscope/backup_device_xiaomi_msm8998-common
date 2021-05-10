@@ -67,7 +67,11 @@ public final class ButtonSwapPreference extends SwitchPreference implements
 
     public ButtonSwapPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setOnPreferenceChangeListener(this);
+        if (FEATURE.isSupported()) {
+            setOnPreferenceChangeListener(this);
+        } else {
+            setEnabled(false);
+        }
     }
 
     @Override

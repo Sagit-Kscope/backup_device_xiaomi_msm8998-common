@@ -17,7 +17,7 @@ public final class SpectrumSwitchPreference extends SwitchPreference implements
 
     public static final String PREFERENCE_KEY = "pref_spectrum_enabled";
 
-    public static final String PREFERENCE_SWITCH_OFF = Boolean.FALSE.toString();
+    private static final String PREFERENCE_SWITCH_OFF = Boolean.FALSE.toString();
 
     public static final KernelFeature<Boolean> FEATURE = new KernelFeature<Boolean>() {
 
@@ -56,8 +56,9 @@ public final class SpectrumSwitchPreference extends SwitchPreference implements
 
     public SpectrumSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setOnPreferenceChangeListener(this);
-        if (!FEATURE.isSupported()) {
+        if (FEATURE.isSupported()) {
+            setOnPreferenceChangeListener(this);
+        } else {
             setEnabled(false);
             setSummary(context.getString(R.string.app_feature_unsupported));
         }

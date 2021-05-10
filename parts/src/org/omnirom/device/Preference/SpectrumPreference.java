@@ -48,7 +48,7 @@ public final class SpectrumPreference extends ListPreference implements
     static final String SPECTRUM_DEFAULT_PROFILE = "0";
     static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
 
-    static final File SPECTRUM_INIT_FILE = new File("/vendor/etc/init/init.spectrum.rc");
+    private static final File SPECTRUM_INIT_FILE = new File("/vendor/etc/init/init.spectrum.rc");
     
     public static final KernelFeature<String> FEATURE = new KernelFeature<String>() {
 
@@ -82,7 +82,11 @@ public final class SpectrumPreference extends ListPreference implements
 
     public SpectrumPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setOnPreferenceChangeListener(this);
+        if (FEATURE.isSupported()) {
+            setOnPreferenceChangeListener(this);
+        } else {
+            setEnabled(false);
+        }
     }
 
     @Override
