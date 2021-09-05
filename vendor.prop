@@ -5,7 +5,7 @@
 # Audio
 persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.voicecall=true
-persist.vendor.audio.fluence.voicerec=false
+persist.vendor.audio.fluence.voicerec=true
 persist.vendor.audio.ras.enabled=false
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac
 ro.vendor.audio.sdk.fluencetype=fluence
