@@ -20,7 +20,10 @@ package org.omnirom.device;
 
 import android.os.Bundle;
 
-public class DeviceSettingsActivity extends BaseActivity {
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.collapsingtoolbar.R;
+
+public final class DeviceSettingsActivity extends CollapsingToolbarBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

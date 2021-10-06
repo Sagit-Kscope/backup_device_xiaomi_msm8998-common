@@ -26,14 +26,16 @@
         <activity
             android:name=".DeviceSettingsActivity"
             android:exported="false"
-            android:label="@string/advanced_settings" />
+            android:label="@string/advanced_settings"
+            android:theme="@style/Theme.SubSettingsBase"/>
             
         <activity-alias
             android:name=".DeviceSettings"
             android:enabled="true"
             android:exported="true"
             android:label="@string/advanced_settings"
-            android:targetActivity=".DeviceSettingsActivity">
+            android:targetActivity=".DeviceSettingsActivity"
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
