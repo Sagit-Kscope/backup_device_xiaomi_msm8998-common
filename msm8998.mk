@@ -81,8 +81,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     org.ifaa.android.manager
 
-PRODUCT_BOOT_JARS += \
-    org.ifaa.android.manager
+#PRODUCT_BOOT_JARS += \
+#    org.ifaa.android.manager
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -424,8 +424,8 @@ PRODUCT_PACKAGES += \
     libmediaextractorservice \
     libnl
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon
 
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/msm8998-common/msm8998-common-vendor.mk)
