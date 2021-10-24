@@ -50,5 +50,4 @@ EXTRA_VENDOR_LIBRARIES_64 := \
     libmediautils \
     libmemunreachable \
     libnblog \
-    libpowermanager \
     libvibrator
