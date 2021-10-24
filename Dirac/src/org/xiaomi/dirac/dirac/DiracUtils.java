@@ -20,7 +20,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Handler;
-import android.os.UserHandle;
 import android.os.SystemClock;
 import android.view.KeyEvent;
 import android.media.session.MediaController;
@@ -58,22 +57,6 @@ public final class DiracUtils {
         }
         mDiracSound.setHeadsetType(mDiracSound.getHeadsetType());
         setLevel(getLevel());
-    }
-
-    protected void refreshPlaybackIfNecessary(){
-        if (mMediaSessionManager == null) {
-            mMediaSessionManager = (MediaSessionManager) mContext.getSystemService(Context.MEDIA_SESSION_SERVICE);
-        }
-        final List<MediaController> sessions
-                = mMediaSessionManager.getActiveSessionsForUser(
-                null, UserHandle.USER_ALL);
-        for (MediaController aController : sessions) {
-            if (PlaybackState.STATE_PLAYING ==
-                    getMediaControllerPlaybackState(aController)) {
-                triggerPlayPause(aController);
-                break;
-            }
-        }
     }
 
     private void triggerPlayPause(MediaController controller) {
@@ -120,9 +103,6 @@ public final class DiracUtils {
     protected void setEnabled(boolean enable) {
         mDiracSound.setEnabled(enable);
         mDiracSound.setMusic(enable ? 1 : 0);
-        if (enable) {
-            refreshPlaybackIfNecessary();
-        }
     }
 
     protected boolean isDiracEnabled() {
