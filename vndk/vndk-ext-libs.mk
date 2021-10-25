@@ -20,7 +20,7 @@ EXTRA_VENDOR_LIBRARIES_32 := \
     libaudiomanager \
     libaudiopolicy \
     libbinder \
-    libbinderthreadstate \
+    libbinder_ndk \
     libbufferhub \
     libbufferhubqueue \
     libcamera_client \
@@ -28,19 +28,21 @@ EXTRA_VENDOR_LIBRARIES_32 := \
     libgui \
     libharfbuzz_ng \
     libheif \
-    libicuuc \
+    libicu \
+    libicui18n \
     libinput \
     libmedia \
     libmediametrics \
     libmediautils \
-    libmemunreachable \
+    libmedia_codeclist \
     libminikin \
     libnblog \
     libpackagelistparser \
     libpdx_default_transport \
     libselinux \
     libsonivox \
-    libvibrator
+    libstagefright_foundation \
+    libpermission
 
 EXTRA_VENDOR_LIBRARIES_64 := \
     libaudioclient \
@@ -48,6 +50,4 @@ EXTRA_VENDOR_LIBRARIES_64 := \
     libaudiopolicy \
     libmediametrics \
     libmediautils \
-    libmemunreachable \
-    libnblog \
-    libvibrator
+    libnblog
