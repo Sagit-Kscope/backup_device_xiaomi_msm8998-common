@@ -120,6 +120,9 @@ service qcom-c_main-sh /vendor/bin/init.class_main.sh
     group root system
     oneshot
 
+on property:vold.decrypt=trigger_restart_framework
+    start qcom-c_main-sh
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864

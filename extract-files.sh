@@ -68,11 +68,8 @@ function blob_fixup() {
     system_ext/etc/permissions/audiosphere.xml)
         sed -i 's|/system/framework/audiosphere.jar|/system_ext/framework/audiosphere.jar|g' "${2}"
         ;;
-    system_ext/etc/permissions/com.qti.dpmframework.xml)
-        sed -i 's|/system/product/framework/com.qti.dpmframework.jar|/system_ext/framework/com.qti.dpmframework.jar|g' "${2}"
-        ;;
-    system_ext/etc/permissions/dpmapi.xml)
-        sed -i 's|/system/product/framework/dpmapi.jar|/system_ext/framework/dpmapi.jar|g' "${2}"
+    system_ext/etc/permissions/com.qti.dpmframework.xml | system_ext/etc/permissions/dpmapi.xml | system_ext/etc/permissions/telephonyservice.xml)
+        sed -i "s|/system/product/framework/|/system/system_ext/framework/|g" "${2}"
         ;;
     system_ext/etc/permissions/qcrilhook.xml)
         sed -i 's|/product/framework/qcrilhook.jar|/system_ext/framework/qcrilhook.jar|g' "${2}"
