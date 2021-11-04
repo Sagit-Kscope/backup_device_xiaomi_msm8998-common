@@ -30,10 +30,6 @@ import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/init.parts.rc
 import /vendor/etc/init/init.spectrum.rc
 
-on early-init
-    mount debugfs debugfs /sys/kernel/debug
-    chmod 0755 /sys/kernel/debug
-
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
