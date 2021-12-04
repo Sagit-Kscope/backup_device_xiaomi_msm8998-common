@@ -167,11 +167,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libpiex_shim
 
-# Control groups and task profiles
-PRODUCT_COPY_FILES += \
-    system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
-    system/core/libprocessgroup/profiles/task_profiles_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
-
 # CNE
 PRODUCT_PACKAGES += \
     cneapiclient \
@@ -384,7 +379,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/power-libperfmgr/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
     $(LOCAL_PATH)/power-libperfmgr/powerhint_high.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint_high.json \
-    $(LOCAL_PATH)/power-libperfmgr/powerhint_low.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint_low.json
+    $(LOCAL_PATH)/power-libperfmgr/powerhint_low.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint_low.json \
+    $(LOCAL_PATH)/configs/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
+    $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # Preopt SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
