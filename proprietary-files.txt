@@ -286,13 +286,11 @@ vendor/lib64/libqti-util.so
 
 # Sensors
 vendor/bin/sensors.qti
-vendor/lib/hw/activity_recognition.msm8998.so
 vendor/lib/libsdsprpc.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
 vendor/lib/libsns_low_lat_stream_stub.so
 vendor/lib/sensors.ssc.so
-vendor/lib64/hw/activity_recognition.msm8998.so
 vendor/lib64/libsdsprpc.so
 vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
