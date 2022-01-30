@@ -59,4 +59,8 @@
 
     <!-- QS tile title -->
     <string name="dirac_qs_tile_title">米音</string>
+
+    <!-- Switch  -->
+    <string name="switch_bar_on">开启</string>
+    <string name="switch_bar_off">关闭</string>
 </resources>
