@@ -130,6 +130,12 @@ on post-fs-data
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_data_done 1
 
+# DSDS - Restart qcrild on data switch
+on property:persist.sys.radio.mobile_data_swap=1
+    restart vendor.qcrild
+    exec /bin/sleep 2
+    restart vendor.qcrild2
+    
 on property:vold.decrypt=trigger_restart_framework
     restart vendor.qcrild
     exec /bin/sleep 2
