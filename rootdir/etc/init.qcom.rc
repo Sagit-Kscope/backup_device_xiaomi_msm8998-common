@@ -129,6 +129,11 @@ on post-fs-data
     # keep that at the end of on post-fs-data
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_data_done 1
+
+on property:vold.decrypt=trigger_restart_framework
+    restart vendor.qcrild
+    exec /bin/sleep 2
+    restart vendor.qcrild2
     
 service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
     class core
