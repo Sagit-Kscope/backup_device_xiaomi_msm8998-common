@@ -360,4 +360,7 @@
     <!-- Enable 802.11ac for Wifi hotspot (SAP) -->
     <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
 
+    <!-- See AmbientSensor.AmbientColorTemperatureSensor. The ambient color temperature sensor name. -->
+    <string name="config_displayWhiteBalanceColorTemperatureSensorName">com.google.sensor.color</string>
+
 </resources>
