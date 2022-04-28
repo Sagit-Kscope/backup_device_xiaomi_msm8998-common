@@ -27,8 +27,6 @@
 
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.target.rc
-import /vendor/etc/init/init.parts.rc
-import /vendor/etc/init/init.spectrum.rc
 
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
