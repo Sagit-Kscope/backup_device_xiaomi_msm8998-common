@@ -4,3 +4,6 @@ genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:
 
 # Vibrator
 genfscon sysfs /devices/virtual/timed_output/vibrator/vtg_level u:object_r:sysfs_vibrator:s0
+
+# Power Stats
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:rradc@4500/iio:device0/name u:object_r:sysfs_iio:s0 

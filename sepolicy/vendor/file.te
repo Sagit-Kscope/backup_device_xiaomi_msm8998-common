@@ -14,3 +14,6 @@ type sysfs_kcal, sysfs_type, fs_type;
 
 # FastCharge
 type sysfs_fastcharge, sysfs_type, fs_type;
+
+# Power Stats
+type sysfs_iio, sysfs_type, fs_type; 
