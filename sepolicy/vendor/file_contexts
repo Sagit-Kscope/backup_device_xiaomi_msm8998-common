@@ -46,3 +46,7 @@
 
 # WiFi
 /vendor/bin/wifi-mac-generator                                u:object_r:wifi-mac-generator_exec:s0
+
+# OIS
+/sys/kernel/ois_control/gyro_cal		                      u:object_r:sysfs_ois:s0
+/sys/kernel/range/cal_data		                              u:object_r:sysfs_ois:s0 
