@@ -1,0 +1,2 @@
+allow location wifi_hal_prop:file { getattr open read };
+allow location wifi_hal_prop:file { read };  
