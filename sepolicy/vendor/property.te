@@ -12,3 +12,6 @@ type thermal_prop, property_type;
 
 # Dirac
 type dirac_prop, property_type;
+
+# Radio
+type exported_radio_prop, property_type;
