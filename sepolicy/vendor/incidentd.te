@@ -1,0 +1,2 @@
+allow incidentd apex_info_file:file getattr;
+allow incidentd kernel:system syslog_read; 
