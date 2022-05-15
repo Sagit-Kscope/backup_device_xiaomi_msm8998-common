@@ -22,3 +22,9 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # Gesture
 PRODUCT_SYSTEM_PROPERTIES += \
     qemu.hw.mainkeys=0
+    
+# Zram
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.zram.mark_idle_delay_mins=60 \
+    ro.zram.first_wb_delay_mins=180 \
+    ro.zram.periodic_wb_delay_hours=24
