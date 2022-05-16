@@ -1,3 +1,0 @@
-# Root extra symlink
-/bt_firmware                 u:object_r:mnt_vendor_file:s0
-/persist                     u:object_r:mnt_vendor_file:s0
