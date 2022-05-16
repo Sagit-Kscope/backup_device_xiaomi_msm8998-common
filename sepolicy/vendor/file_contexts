@@ -20,6 +20,9 @@
 /bt_firmware                                                  u:object_r:bt_firmware_file:s0
 /persist                                                      u:object_r:mnt_vendor_file:s0
 
+# Power
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service-qti u:object_r:hal_power_default_exec:s0
+
 # Sensors
 /(vendor|system/vendor)/bin/init\.panel_info\.sh              u:object_r:qti_init_shell_exec:s0
 /(mnt/vendor)/persist/PRSensorData\.txt                       u:object_r:sensors_persist_file:s0
