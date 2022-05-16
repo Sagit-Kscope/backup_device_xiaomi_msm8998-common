@@ -28,11 +28,11 @@ persist.vendor.sys.pay.ifaa                                   u:object_r:vendor_
 persist.vendor.sys.pay.soter                                  u:object_r:vendor_tee_listener_prop:s0
 
 # Radio
-persist.sys.labtest_flag                                      u:object_r:exported_radio_prop:s0
+persist.sys.labtest_flag                                      u:object_r:radio_control_prop:s0
 ro.build.software.version                                     u:object_r:vendor_qcom_ims_prop:s0
-ro.carrier.name                                               u:object_r:exported_radio_prop:s0
-ro.miui.                                                      u:object_r:exported_radio_prop:s0
-ro.product.mod_device                                         u:object_r:exported_radio_prop:s0
+ro.carrier.name                                               u:object_r:radio_control_prop:s0
+ro.miui.                                                      u:object_r:radio_control_prop:s0
+ro.product.mod_device                                         u:object_r:radio_control_prop:s0
 ril.fake_bs_flag0                                             u:object_r:vendor_radio_prop:s0
 ril.fake_bs_flag1                                             u:object_r:vendor_radio_prop:s0
 
@@ -65,4 +65,7 @@ vendor.powerhal.init                                          u:object_r:vendor_
 vendor.powerhal.rendering                                     u:object_r:vendor_power_prop:s0
 
 # Data files
-/data/per_boot(/.*)?                                          u:object_r:per_boot_file:s0 
+/data/per_boot(/.*)?                                          u:object_r:per_boot_file:s0
+
+# CNSS
+persist.cnss-daemon.debug_level                               u:object_r:cnss_prop:s0

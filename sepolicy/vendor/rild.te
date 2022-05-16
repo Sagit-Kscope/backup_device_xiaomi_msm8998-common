@@ -7,4 +7,4 @@ allow rild vendor_file:file ioctl;
 get_prop(rild, vendor_pd_locater_dbg_prop)
 get_prop(rild, vendor_qcom_ims_prop)
 get_prop(rild, default_prop)
-get_prop(rild, exported_radio_prop) 
+get_prop(rild, radio_control_prop) 

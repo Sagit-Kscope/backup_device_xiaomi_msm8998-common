@@ -20,3 +20,6 @@ type sysfs_iio, sysfs_type, fs_type;
 
 # OIS
 type sysfs_ois, sysfs_type, fs_type; 
+
+# UFS
+type sysfs_ufs, sysfs_type, fs_type;

@@ -1,4 +1,4 @@
-set_prop(system_app,exported_radio_prop)
+set_prop(system_app,radio_control_prop)
 binder_call(system_app, hal_alarm_qti_default)
 
 # Parts
@@ -22,3 +22,6 @@ allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;
 
 allow system_app mnt_vendor_file:dir { search };
+
+# HW
+get_prop(system_app, qemu_hw_prop)
