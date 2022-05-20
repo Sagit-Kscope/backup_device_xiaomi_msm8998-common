@@ -41,6 +41,12 @@
     <string name="menu_reset">Reset</string>
     <string name="kcal_color_temp">Color temperature (K)</string>
 
+    <!-- Spectrum Profiles -->
+    <string name="spectrum_profile_title">Kernel Profiles</string>
+    <string name="spectrum_title">Kernel Profile</string>
+    <string name="spectrum_summary">Choose your kernel profile</string>
+    <string name="spectrum_dialogTitle">Choose your kernel profile</string>
+
     <!-- Swap HW buttons -->
     <string name="hw_buttons_title">Hardware buttons</string>
     <string name="swap_hw_buttons_title">Swap buttons</string>

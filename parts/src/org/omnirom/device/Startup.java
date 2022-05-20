@@ -29,6 +29,7 @@ import org.omnirom.device.Preference.BacklightPreference;
 import org.omnirom.device.Preference.ButtonSwapPreference;
 import org.omnirom.device.Preference.FastChargePreference;
 import org.omnirom.device.Preference.S2SVibratorStrengthPreference;
+import org.omnirom.device.Preference.SpectrumPreference;
 import org.omnirom.device.Preference.SweepToSleepPreference;
 
 public final class Startup extends BroadcastReceiver {
@@ -44,6 +45,7 @@ public final class Startup extends BroadcastReceiver {
             FastChargePreference.FEATURE.restore(sp);
             SweepToSleepPreference.FEATURE.restore(sp);
             S2SVibratorStrengthPreference.FEATURE.restore(sp);
+            SpectrumPreference.FEATURE.restore(sp);
 
             DisplayCalibration.restore(sp);
         }

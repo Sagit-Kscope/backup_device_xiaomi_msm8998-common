@@ -17,7 +17,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">其他设置</string>
     <string name="advanced_settings">其他设置</string>
-    <string name="advanced_settings_summary">色彩校准、滑动休眠、米音</string>
+    <string name="advanced_settings_summary">色彩校准、CPU 运行模式、滑动休眠</string>
 
     <string name="display_title">显示</string>
     <string name="device_doze_title">环境显示</string>
@@ -40,6 +40,12 @@
     <string name="kcal_contrast">对比度</string>
     <string name="menu_reset">重置</string>
     <string name="kcal_color_temp">色温 (K)</string>
+
+    <!-- Spectrum Profiles -->
+    <string name="spectrum_profile_title">CPU 模式</string>
+    <string name="spectrum_title">CPU 运行模式</string>
+    <string name="spectrum_summary">选择 CPU 运行模式</string>
+    <string name="spectrum_dialogTitle">选择 CPU 运行模式</string>
     
     <!-- Swap HW buttons -->
     <string name="hw_buttons_title">实体按键</string>

@@ -45,6 +45,9 @@ persist.sys.sensors.                                          u:object_r:vendor_
 ro.xiaomi.sar_fusion                                          u:object_r:vendor_sensors_prop:s0
 sys.panel.                                                    u:object_r:sensors_panel_prop:s0
 
+# Spectrum
+persist.spectrum.profile                                      u:object_r:spectrum_prop:s0
+
 # Thermal engine
 persist.sys.thermal.                                          u:object_r:thermal_prop:s0
 sys.thermal.                                                  u:object_r:thermal_prop:s0
