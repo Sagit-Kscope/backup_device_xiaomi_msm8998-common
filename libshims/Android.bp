@@ -27,3 +27,13 @@ cc_library {
         "lib-imsvt/lib-imsvt.cpp",
     ],
 }
+
+cc_library {
+    name: "libshim_gui",
+    shared_libs: [
+        "libgui",
+        "libutils",
+    ],
+    srcs: ["gui/gui_shim.cpp"],
+    system_ext_specific: true,
+}

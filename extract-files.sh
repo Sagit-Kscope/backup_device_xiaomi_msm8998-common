@@ -79,7 +79,15 @@ function blob_fixup() {
             "${PATCHELF}" --add-needed "libshim_dpmframework.so" "$LIBDPM_SHIM"
         done
         ;;
+    system_ext/lib64/lib-imscamera.so)
+        for LIBGUI_SHIM in $(grep -L "libshim_gui.so" "${2}"); do
+            "${PATCHELF}" --add-needed "libshim_gui.so" "${LIBGUI_SHIM}"
+        done
+        ;;
     system_ext/lib64/lib-imsvideocodec.so)
+        for LIBGUI_SHIM in $(grep -L "libshim_gui.so" "${2}"); do
+            "${PATCHELF}" --add-needed "libshim_gui.so" "${LIBGUI_SHIM}"
+        done
         for LIBDPM_SHIM in $(grep -L "libshim_imsvt.so" "${2}"); do
             "${PATCHELF}" --add-needed "libshim_imsvt.so" "$LIBDPM_SHIM"
         done

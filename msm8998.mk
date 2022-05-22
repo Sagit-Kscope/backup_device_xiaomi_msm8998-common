@@ -279,6 +279,7 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml \
+    libshim_gui \
     libshim_imsvt
 
 PRODUCT_PACKAGES += \
