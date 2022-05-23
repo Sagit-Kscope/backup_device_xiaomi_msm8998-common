@@ -36,9 +36,6 @@ on init
     # vold needs keymaster which needs qseecomd
     start vendor.qseecomd
 
-    # Wait until TEE is ready
-    wait_for_prop vendor.sys.listeners.registered true
-
     # Boot-time fs tuning
     write /sys/block/sda/queue/iostats 0
     write /sys/block/sda/queue/nr_requests 256
@@ -162,6 +159,9 @@ on fs
 on post-fs
     write /dev/ipa 1
 
+    # Wait until TEE is ready
+    wait_for_prop vendor.sys.listeners.registered true
+    
 on boot
     # Load QCACLD WLAN driver
     insmod /vendor/lib/modules/wlan.ko
