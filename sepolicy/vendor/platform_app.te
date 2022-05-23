@@ -1,7 +1,0 @@
-# FPS tile
-allow platform_app sysfs_fps:file { getattr open read };
-
-allow platform_app device:chr_file { ioctl };
-allow platform_app device:chr_file { read write };
-binder_call(init, platform_app)
-set_prop(platform_app, default_prop)

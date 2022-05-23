@@ -3,4 +3,4 @@ get_prop(hal_audio_default, dirac_prop)
 set_prop(hal_audio_default, dirac_prop)
 
 allow hal_audio_default diag_device:chr_file rw_file_perms;
-allow hal_audio_default default_prop:file { getattr open read }; 
+dontaudit hal_audio_default default_android_vndservice:service_manager { add find };

@@ -1,6 +1,7 @@
 # Fingerprint
 type fingerprint_persist_file, file_type;
 type fingerprint_sysfs, sysfs_type, fs_type;
+type goodix_fingerprint_data_file, data_file_type, file_type, core_data_file_type;
 
 # Thermal engine
 type thermal_data_file, data_file_type, file_type;
@@ -15,11 +16,8 @@ type sysfs_kcal, sysfs_type, fs_type;
 # FastCharge
 type sysfs_fastcharge, sysfs_type, fs_type;
 
-# Power Stats
-type sysfs_iio, sysfs_type, fs_type;
-
-# OIS
-type sysfs_ois, sysfs_type, fs_type; 
+# netmgr
+type netmgr_data_file, file_type, data_file_type;
 
 # UFS
 type sysfs_ufs, sysfs_type, fs_type;

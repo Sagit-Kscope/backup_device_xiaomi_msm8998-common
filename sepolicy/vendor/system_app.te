@@ -1,15 +1,8 @@
-set_prop(system_app,radio_control_prop)
-binder_call(system_app, hal_alarm_qti_default)
-
 # Parts
 allow system_app sysfs_sectouch:file rwx_file_perms;
 allow system_app sysfs_leds:dir search;
 allow system_app {sysfs_sectouch sysfs_graphics }:dir search;
 allow system_app sysfs_graphics:file rwx_file_perms;
-
-# Spectrum
-allow system_app spectrum_prop:property_service set;
-get_prop(system_app, spectrum_prop);
 
 # Sweep2sleep
 allow system_app sysfs_sts:file rwx_file_perms;
@@ -21,11 +14,10 @@ allow system_app sysfs_kcal:dir { search };
 # FastCharge
 allow system_app sysfs_fastcharge:file rwx_file_perms;
 
+# Spectrum
+allow system_app spectrum_prop:property_service set;
+get_prop(system_app, spectrum_prop);
+
 # Zram
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;
-
-allow system_app mnt_vendor_file:dir { search };
-
-# HW
-get_prop(system_app, qemu_hw_prop)

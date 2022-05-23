@@ -1,14 +1,3 @@
-# Fingerprint
-allow system_server fingerprint_sysfs:file rw_file_perms;
-
-get_prop(system_server, vendor_fp_prop)
-get_prop(system_server, camera_prop)
-get_prop(system_server, userspace_reboot_config_prop)
-get_prop(system_server, userspace_reboot_exported_prop)
 allow system_server app_zygote:process { getpgid };
-
-# Allow WIFI Load Server
-allow system_server rootfs:system module_load;
-allow system_server system_file:system module_load;
-
-allow system_server init:binder { call }; 
+allow system_server init:binder { call };
+allow system_server crash_dump:process { getpgid };

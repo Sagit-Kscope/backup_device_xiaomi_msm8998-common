@@ -1,10 +1,9 @@
-typeattribute rild data_between_core_and_vendor_violators;
 allow rild tombstone_data_file:dir rw_dir_perms;
 allow rild tombstone_data_file:file rw_file_perms;
 
 allow rild vendor_file:file ioctl;
 
 get_prop(rild, vendor_pd_locater_dbg_prop)
-get_prop(rild, vendor_qcom_ims_prop)
-get_prop(rild, default_prop)
-get_prop(rild, radio_control_prop) 
+
+# Allow binder communication with qtidataservices_app
+binder_call(rild, qtidataservices_app)

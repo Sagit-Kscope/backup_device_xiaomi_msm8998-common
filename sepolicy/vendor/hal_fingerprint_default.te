@@ -1,5 +1,3 @@
-typeattribute hal_fingerprint_default data_between_core_and_vendor_violators;
-
 allow hal_fingerprint_default fingerprint_device:chr_file rw_file_perms;
 allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
 allow hal_fingerprint_default uhid_device:chr_file rw_file_perms;
@@ -25,6 +23,8 @@ set_prop(hal_fingerprint_default, vendor_fp_prop);
 allow hal_fingerprint_default sysfs_kcal:dir rw_dir_perms;
 allow hal_fingerprint_default sysfs_kcal:file rw_file_perms;
 
-allow hal_fingerprint_default power_service:service_manager { find };
+allow hal_fingerprint_default sysfs_ufs:dir { search };
+allow hal_fingerprint_default sysfs_ufs:file { read open };
+
 allow hal_fingerprint_default vfat:dir { search };
-allow hal_fingerprint_default vfat:file { getattr open read };  
+allow hal_fingerprint_default vfat:file { read open getattr };

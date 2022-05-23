@@ -1,6 +1,8 @@
 set_prop(qti_init_shell, sensors_panel_prop);
 
+allow qti_init_shell ctl_stop_prop:property_service { set };
+allow qti_init_shell vfat:dir { read open search };
+allow qti_init_shell vfat:file { getattr read open };
+
 # Ignore harmless denials
 dontaudit qti_init_shell qti_init_shell:capability { dac_override dac_read_search };
-allow qti_init_shell vfat:dir { search };
-set_prop(qti_init_shell, ctl_stop_prop)

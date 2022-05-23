@@ -1,2 +1,1 @@
 allow mediaprovider_app rootfs:file { getattr setattr };
-allow mediaprovider_app mnt_media_rw_file:dir { getattr search };

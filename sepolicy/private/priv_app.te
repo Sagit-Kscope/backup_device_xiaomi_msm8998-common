@@ -1,0 +1,3 @@
+get_prop(priv_app, aac_drc_prop)
+get_prop(priv_app, ab_update_gki_prop)
+get_prop(priv_app, adbd_prop)
