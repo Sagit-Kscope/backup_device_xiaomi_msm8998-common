@@ -123,6 +123,10 @@ service qcom-c_main-sh /vendor/bin/init.class_main.sh
 
 on property:vold.decrypt=trigger_restart_framework
     start qcom-c_main-sh
+    
+service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
+    class core
+    capabilities NET_BIND_SERVICE
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -261,14 +265,6 @@ service vendor.panel-info /vendor/bin/init.panel_info.sh
     class core
     user root
     oneshot
-
-service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
-    class main
-    socket rild2 stream 660 root radio
-    socket rild-debug2 stream 660 radio system
-    user radio
-    group radio cache inet misc audio sdcard_r sdcard_rw diag log
-    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service charger /system/bin/charger
     class charger

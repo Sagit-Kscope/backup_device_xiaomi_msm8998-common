@@ -59,25 +59,8 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-    lib64/libwfdnative.so)
-        "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
-        ;;
-    system_ext/etc/init/dpmd.rc)
-        sed -i 's|/system/product/bin/dpmd|/system_ext/bin/dpmd|g' "${2}"
-        ;;
     system_ext/etc/permissions/audiosphere.xml)
         sed -i 's|/system/framework/audiosphere.jar|/system_ext/framework/audiosphere.jar|g' "${2}"
-        ;;
-    system_ext/etc/permissions/com.qti.dpmframework.xml | system_ext/etc/permissions/dpmapi.xml | system_ext/etc/permissions/telephonyservice.xml)
-        sed -i "s|/system/product/framework/|/system/system_ext/framework/|g" "${2}"
-        ;;
-    system_ext/etc/permissions/qcrilhook.xml)
-        sed -i 's|/product/framework/qcrilhook.jar|/system_ext/framework/qcrilhook.jar|g' "${2}"
-        ;;
-    system_ext/lib64/libdpmframework.so)
-        for LIBDPM_SHIM in $(grep -L "libshim_dpmframework.so" "${2}"); do
-            "${PATCHELF}" --add-needed "libshim_dpmframework.so" "$LIBDPM_SHIM"
-        done
         ;;
     system_ext/lib64/lib-imscamera.so)
         for LIBGUI_SHIM in $(grep -L "libshim_gui.so" "${2}"); do
@@ -91,9 +74,6 @@ function blob_fixup() {
         for LIBDPM_SHIM in $(grep -L "libshim_imsvt.so" "${2}"); do
             "${PATCHELF}" --add-needed "libshim_imsvt.so" "$LIBDPM_SHIM"
         done
-        ;;
-    vendor/etc/permissions/qti_libpermissions.xml)
-        sed -i 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
         ;;
     vendor/lib/hw/camera.msm8998.so)
         "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"

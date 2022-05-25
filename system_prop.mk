@@ -16,8 +16,25 @@
 
 # Radio
 PRODUCT_SYSTEM_PROPERTIES += \
+    DEVICE_PROVISIONED=1 \
+    keyguard.no_require_sim=true \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.radio.multisim.config=dsds \
+    persist.rmnet.data.enable=true \
     persist.sys.fflag.override.settings_network_and_internet_v2=true \
-    persist.sys.fflag.override.settings_provider_model=false
+    persist.sys.fflag.override.settings_provider_model=false \
+    il.subscription.types=NV,RUIM \
+    ro.telephony.call_ring.multiple=false \
+    ro.telephony.default_cdma_sub=0 \
+    ro.telephony.default_network=22,20 \
+    ro.telephony.iwlan_operation_mode=legacy \
+    telephony.lteOnCdmaDevice=1 \
+
+# RCS
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.rcs.supported=1
 
 # Gesture
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -33,3 +50,16 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.dpm.feature=1 \
     persist.vendor.dpm.nsrm.bkg.evt=3955
+    
+# Data
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.vendor.use_data_netmgrd=true \
+    persist.vendor.data.iwlan.enable=true \
+    persist.vendor.data.mode=concurrent
+    
+# VoLTE
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1
+    

@@ -145,12 +145,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/platform/soc/1da4000.ufshc/by-name/frp
 
-# IMS
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1 \
-    persist.vendor.qti.telephony.vt_cam_interface=1
-
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
@@ -193,21 +187,24 @@ PRODUCT_ODM_PROPERTIES += \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.multisim.config=dsds \
-    persist.rmnet.data.enable=true \
-    persist.vendor.data.mode=concurrent \
+    persist.vendor.ims.disableADBLogs=1 \
+    persist.vendor.ims.disableDebugLogs=1 \
+    persist.vendor.ims.disableIMSLogs=1 \
+    persist.vendor.ims.disableQXDMLogs=1 \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
+    persist.vendor.radio.atfwd.start=true \
     persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.data_con_rprt=1 \
+    persist.vendor.radio.enableadvancedscan=false \
     persist.vendor.radio.force_on_dc=true \
     persist.vendor.radio.mt_sms_ack=30 \
+    persist.vendor.radio.procedure_bytes=SKIP \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.report_codec=1 \
     persist.vendor.radio.sib16_support=1 \
-    ro.telephony.default_cdma_sub=0 \
-    ro.telephony.default_network=22,22 \
-    ro.vendor.use_data_netmgrd=true \
-    telephony.lteOnCdmaDevice=1 \
+    vendor.rild.libpath="/vendor/lib64/libril-qc-hal-qmi.so" \
+    vendor.service.qti.ims.enabled=1 \
     vendor.voice.path.for.pcm.voip=true
 
 # Sensors
@@ -256,3 +253,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wlan
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
+    
+# Volte
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.qti.telephony.vt_cam_interface=1
+

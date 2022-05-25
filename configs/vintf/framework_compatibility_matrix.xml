@@ -63,38 +63,39 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.radio</name>
+        <version>1.0-5</version>
+        <interface>
+            <name>ISap</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.radio</name>
+        <version>1.0-6</version>
+        <interface>
+            <name>IRadio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
     <hal format="hidl">
         <name>android.hardware.radio.config</name>
-        <version>1.1</version>
+        <version>1.0-2</version>
         <interface>
             <name>IRadioConfig</name>
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.radio.deprecated</name>
-        <version>1.0</version>
+        <name>android.hardware.secure_element</name>
+        <version>1.0-2</version>
         <interface>
-            <name>IRadio</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.radio</name>
-        <version>1.2</version>
-        <interface>
-            <name>ISap</name>
-            <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.radio</name>
-        <version>1.4</version>
-        <interface>
-            <name>IRadio</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
+            <name>ISecureElement</name>
+            <instance>SIM1</instance>
+            <instance>SIM2</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -182,7 +183,7 @@
     </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.uceservice</name>
-        <version>2.0-2</version>
+        <version>2.0-3</version>
         <interface>
             <name>IUceService</name>
             <instance>com.qualcomm.qti.uceservice</instance>
@@ -205,8 +206,16 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>vendor.nxp.nxpnfc</name>
+        <version>1.0</version>
+        <interface>
+            <name>INxpNfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.data.factory</name>
-        <version>2.0</version>
+        <version>2.0-3</version>
         <interface>
             <name>IFactory</name>
             <instance>default</instance>
@@ -233,6 +242,14 @@
         <version>1.0</version>
         <interface>
             <name>IBTConfigStore</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.cacert</name>
+        <version>1.0</version>
+        <interface>
+            <name>IService</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -271,6 +288,14 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.factory</name>
+        <version>1.1</version>
+        <interface>
+            <name>IFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.perf</name>
         <version>1.0</version>
         <interface>
@@ -289,7 +314,7 @@
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.ims</name>
-        <version>1.0-6</version>
+        <version>1.0-7</version>
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>
@@ -298,7 +323,7 @@
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.lpa</name>
-        <version>1.0</version>
+        <version>1.0-1</version>
         <interface>
             <name>IUimLpa</name>
             <instance>UimLpa0</instance>
@@ -325,7 +350,7 @@
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
-        <version>2.0-3</version>
+        <version>2.0-4</version>
         <interface>
             <name>IQtiRadio</name>
             <instance>slot1</instance>
@@ -343,7 +368,7 @@
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim_remote_client</name>
-        <version>1.0</version>
+        <version>1.0-2</version>
         <interface>
             <name>IUimRemoteServiceClient</name>
             <instance>uimRemoteClient0</instance>
@@ -380,6 +405,15 @@
         <version>1.0</version>
         <interface>
             <name>IService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.ims.factory</name>
+        <transport>hwbinder</transport>
+        <version>1.0-1</version>
+        <interface>
+            <name>IImsFactory</name>
             <instance>default</instance>
         </interface>
     </hal>

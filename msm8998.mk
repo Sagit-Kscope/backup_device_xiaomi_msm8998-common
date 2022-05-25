@@ -170,6 +170,13 @@ PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
     system/core/libprocessgroup/profiles/task_profiles_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
+# CNE
+PRODUCT_PACKAGES += \
+    cneapiclient \
+    com.quicinc.cne \
+    libcnefeatureconfig \
+    services-ext
+
 # Display
 PRODUCT_PACKAGES += \
     gralloc.msm8998 \
@@ -199,10 +206,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     XiaomiDoze \
     XiaomiParts
-
-# DPM
-PRODUCT_PACKAGES += \
-    libshim_dpmframework
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -271,6 +274,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
 
+# IPA Manager
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml
+    
 # IFAA
 PRODUCT_PACKAGES += \
     IFAAService \
@@ -358,6 +366,12 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# Privapp permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/product-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/product-privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/system_ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/system_ext-privapp-permissions-qti.xml
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service \
@@ -365,6 +379,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@1.0.vendor
 
 # Protobuf
+# FIXME: master: compat for libprotobuf
+# See https://android-review.googlesource.com/c/platform/prebuilts/vndk/v28/+/1109518
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
     libprotobuf-cpp-lite-vendorcompat
@@ -372,11 +388,6 @@ PRODUCT_PACKAGES += \
 # Properties
 include $(LOCAL_PATH)/system_prop.mk
 include $(LOCAL_PATH)/vendor_prop.mk
-
-# QCOM
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-qti-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml \
-    $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
 # QMI
 $(call inherit-product, external/json-c/Android.configure.mk)
@@ -411,25 +422,21 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.0.vendor \
     android.hardware.radio.config@1.0.vendor \
     android.hardware.secure_element@1.0.vendor \
-    android.hardware.radio.config@1.2 \
+    android.hardware.radio@1.6.vendor \
     android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio@1.2 \
-    android.hardware.radio@1.2.vendor \
-    android.hardware.radio@1.4 \
-    android.hardware.radio@1.4.vendor \
-    android.hardware.radio.deprecated@1.0 \
     android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.secure_element@1.0 \
-    android.hardware.secure_element@1.0.vendor \
-    CarrierConfigOverlay \
-    rild \
+    android.hardware.secure_element@1.2.vendor \
+    libprotobuf-cpp-full \
     librmnetctl \
-    libprotobuf-cpp-full
+    libxml2
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/qmi_fw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/qmi_fw.conf
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
-    $(LOCAL_PATH)/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
+    $(LOCAL_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
+    $(LOCAL_PATH)/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -468,18 +475,14 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_cfg.xml \
+    android.hardware.wifi@1.0-service \
     libwpa_client \
+    libwifi-hal-qcom \
     hostapd \
+    hostapd_cli \
     wpa_supplicant \
     wpa_supplicant.conf \
-    WifiOverlay
-
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service
-
-PRODUCT_PACKAGES += \
+    WifiOverlay \
     wifi-mac-generator
 
 PRODUCT_COPY_FILES += \
