@@ -178,7 +178,7 @@
     <hal format="hidl">
         <name>com.qualcomm.qti.uceservice</name>
         <transport>hwbinder</transport>
-        <fqname>@2.2::IUceService/com.qualcomm.qti.uceservice</fqname>
+        <fqname>@2.1::IUceService/com.qualcomm.qti.uceservice</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.display.config</name>
@@ -193,7 +193,7 @@
     <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
-        <fqname>@2.1::IFactory/default</fqname>
+        <fqname>@2.0::IFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.alarm</name>
@@ -272,12 +272,6 @@
         <transport>hwbinder</transport>
         <fqname>@2.3::IQtiRadio/slot1</fqname>
         <fqname>@2.3::IQtiRadio/slot2</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.radio.qtiradio</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.4::IQtiRadio/slot1</fqname>
-        <fqname>@2.4::IQtiRadio/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim</name>
