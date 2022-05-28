@@ -55,3 +55,6 @@
 
 # Mutualex service
 /(vendor|system/vendor)/bin/mutualex                          u:object_r:mutualex_exec:s0
+
+# Chgctrl HAL
+/(vendor|system/vendor)/bin/hw/vendor\.kscope\.chgctrl@1\.0-service\.xiaomi_msm8998 u:object_r:hal_chargecontrol_default_exec:s0
