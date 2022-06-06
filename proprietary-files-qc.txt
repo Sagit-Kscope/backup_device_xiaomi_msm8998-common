@@ -493,9 +493,8 @@ vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa
 vendor/bin/tftp_server|1d9d9378b18d24d966d281fdad54678ea38c524c
 vendor/etc/init/vendor.qti.tftp.rc|b27f188cbffba470a4510d50e46ff7c8446c22cb
 
-# Time services - from LA.UM.9.6.2.r1-02500-89xx.0
+# Time services - from LA.UM.9.6.2.r1-04100-89xx.0
 -vendor/app/TimeService/TimeService.apk|1a5f39aa2969feee50ff81ec870b5e2669ae515e
--vendor/lib/libtime_genoff.so|0e73ee0b125f4538d4afd76b4a4cd009176e98b1
--vendor/lib64/libtime_genoff.so|3f57de1aeb7aa113a0a579cebed85ab4405b9b49
-vendor/bin/time_daemon|e62d164b8c8b30743837896d4c5e8bca39b364e6
+vendor/bin/time_daemon|737bbb156a23d114aafd4b4bb9adc38e8d965391
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
+vendor/lib64/libtime_genoff.so|3f57de1aeb7aa113a0a579cebed85ab4405b9b49

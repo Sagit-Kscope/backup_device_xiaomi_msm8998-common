@@ -63,3 +63,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1
     
+# TimeService
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.timed.enable=true
+    
