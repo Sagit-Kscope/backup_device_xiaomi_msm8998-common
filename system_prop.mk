@@ -35,10 +35,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # RCS
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.rcs.supported=1
-
-# Gesture
-PRODUCT_SYSTEM_PROPERTIES += \
-    qemu.hw.mainkeys=0
     
 # Zram
 PRODUCT_SYSTEM_PROPERTIES += \
