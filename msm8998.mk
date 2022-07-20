@@ -290,12 +290,7 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml
     
 # IFAA
-PRODUCT_PACKAGES += \
-    IFAAService \
-    org.ifaa.android.manager
-
-PRODUCT_BOOT_JARS += \
-    org.ifaa.android.manager
+include vendor/xiaomi/msm8998-common-extra/ifaa.mk
 
 # IMS
 PRODUCT_PACKAGES += \
