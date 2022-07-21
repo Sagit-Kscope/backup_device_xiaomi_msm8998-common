@@ -24,9 +24,6 @@
 /(vendor|system/vendor)/bin/init\.panel_info\.sh              u:object_r:qti_init_shell_exec:s0
 /(mnt/vendor)/persist/PRSensorData\.txt                       u:object_r:sensors_persist_file:s0
 
-# Power
-/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service-qti u:object_r:hal_power_default_exec:s0
-
 # Sweep2sleep
 /sys/sweep2sleep/sweep2sleep                                  u:object_r:sysfs_sts:s0
 /sys/sweep2sleep/vib_strength                                 u:object_r:sysfs_sts:s0
