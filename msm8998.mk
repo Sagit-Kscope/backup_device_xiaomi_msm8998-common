@@ -178,6 +178,10 @@ PRODUCT_PACKAGES += \
     libcnefeatureconfig \
     services-ext
 
+# Charge control
+PRODUCT_PACKAGES += \
+    vendor.kscope.chgctrl@1.0-service.xiaomi_msm8998
+    
 # Display
 PRODUCT_PACKAGES += \
     gralloc.msm8998 \
