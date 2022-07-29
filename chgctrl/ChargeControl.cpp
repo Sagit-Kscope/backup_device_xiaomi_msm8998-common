@@ -20,7 +20,7 @@
 #include <android-base/logging.h>
 #include <fcntl.h>
 
-#define CHARGE_CONTROL_NODE "/sys/class/power_supply/battery/charging_enabled"
+#define CHARGE_CONTROL_NODE "/sys/class/power_supply/battery/charge_done"
 #define CHARGE_ENABLED '0'
 #define CHARGE_DISABLED '1'
 
