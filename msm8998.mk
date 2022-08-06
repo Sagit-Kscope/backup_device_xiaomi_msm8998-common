@@ -145,6 +145,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
+# Call recording for Google Dialer
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/com.google.android.apps.dialer.call_recording_audio.features.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.dialer.call_recording_audio.features.xml
+
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
