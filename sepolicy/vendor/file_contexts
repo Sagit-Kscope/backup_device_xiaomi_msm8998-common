@@ -14,7 +14,7 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_msm8998 u:object_r:hal_light_default_exec:s0
 
 # Mlipay
-/(vendor|system/vendor)/bin/mlipayd@1\.1                       u:object_r:hal_mlipay_default_exec:s0
+/(vendor|system/vendor)/bin/mlipayd@1\.1                      u:object_r:hal_mlipay_default_exec:s0
 
 # Root extra symlink
 /bt_firmware                                                  u:object_r:bt_firmware_file:s0
@@ -39,7 +39,7 @@
 /data/vendor/thermal(/.*)?                                    u:object_r:thermal_data_file:s0
 
 # UFS
-/sys/devices/soc/1da4000.ufshc(/.*)?                         u:object_r:sysfs_ufs:s0
+/sys/devices/soc/1da4000.ufshc(/.*)?                          u:object_r:sysfs_ufs:s0
 
 # Vibrator
 /sys/devices/virtual/timed_output/vibrator/(/.*)?             u:object_r:sysfs_vibrator:s0
@@ -55,3 +55,6 @@
 
 # Chgctrl HAL
 /(vendor|system/vendor)/bin/hw/vendor\.kscope\.chgctrl@1\.0-service\.xiaomi_msm8998 u:object_r:hal_chargecontrol_default_exec:s0
+
+# Power
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service-qti u:object_r:hal_power_default_exec:s0
