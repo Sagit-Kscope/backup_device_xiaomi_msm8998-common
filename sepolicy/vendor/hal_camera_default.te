@@ -3,3 +3,4 @@ allow hal_camera_default diag_device:chr_file { read write open };
 
 #get_prop(hal_camera_default, default_prop)
 get_prop(hal_camera_default, bootanim_system_prop)
+get_prop(hal_camera_default, system_prop)

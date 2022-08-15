@@ -1,2 +1,2 @@
 allow hal_perf_default self:capability { dac_override sys_admin };
-allow hal_perf_default sysfs_ufs:dir { search };
+allow hal_perf_default sysfs_ufs:dir { read search };
