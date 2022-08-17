@@ -337,6 +337,6 @@
         <fqname>@1.1::IMlipayService/default</fqname>
     </hal>
     <sepolicy>
-        <version>32.0</version>
+        <version>33.0</version>
     </sepolicy>
 </manifest>
