@@ -480,6 +480,7 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
+    android.hardware.wifi.hostapd@1.0.vendor \
     libwpa_client \
     libwifi-hal-qcom \
     hostapd \
