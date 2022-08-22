@@ -160,6 +160,9 @@ PRODUCT_PACKAGES += \
     libshmemcompat.vendor_32 \
     mediametricsservice-aidl-cpp.vendor_32
 
+PRODUCT_PACKAGES += \
+    libpiex_shim
+
 # Component overrides
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
