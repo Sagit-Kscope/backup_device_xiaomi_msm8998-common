@@ -1,8 +1,14 @@
 # cnss-daemon
 vendor_internal_prop(cnss_prop)
 
+# Dirac
+vendor_internal_prop(dirac_prop)
+
 # Fingerprint
 vendor_public_prop(vendor_fp_prop)
+
+# mwqem property
+vendor_restricted_prop(vendor_mwqem_prop)
 
 # Sensors
 vendor_internal_prop(sensors_panel_prop)
@@ -12,9 +18,3 @@ vendor_internal_prop(spectrum_prop)
 
 # Thermal engine
 vendor_internal_prop(thermal_prop)
-
-# Dirac
-vendor_internal_prop(dirac_prop)
-
-# mwqem property
-vendor_restricted_prop(vendor_mwqem_prop)

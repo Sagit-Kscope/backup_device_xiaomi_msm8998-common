@@ -4,6 +4,9 @@ allow rild tombstone_data_file:file rw_file_perms;
 allow rild vendor_file:file ioctl;
 
 get_prop(rild, vendor_pd_locater_dbg_prop)
+get_prop(radio, vendor_qcom_ims_prop)
+
+allow rild diag_device:chr_file rw_file_perms;
 
 # Allow binder communication with qtidataservices_app
 binder_call(rild, qtidataservices_app)
