@@ -107,7 +107,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
-    android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.audio@2.0-impl \
     libbthost_if
 
 PRODUCT_COPY_FILES += \
