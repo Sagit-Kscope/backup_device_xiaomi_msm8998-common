@@ -185,6 +185,11 @@ vendor/lib64/libsecureui.so|65f24fb26da7f0bfd507c04e9efb278a4cdd8c20
 vendor/lib64/libsecureui_svcsock.so|e364290497862270cd01d9be84f0141ea92e92f9
 vendor/lib64/libssd.so|d6758bd01b360be7bb68f35f56978a5e9a21d3c3
 
+# DRM - from Dumplings
+vendor/lib64/libops.so
+vendor/lib64/libqisl.so
+vendor/lib64/libspl.so
+
 # DRM (TUI) - from LA.UM.8.2.r1-07500-sdm660.0
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|d4d025e0a12af87f65104fe07801517938733603
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
