@@ -388,6 +388,9 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
     vendor.qti.hardware.perf@1.0.vendor
 
+# Preopt SystemUI
+PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
+
 # Protobuf
 # FIXME: master: compat for libprotobuf
 # See https://android-review.googlesource.com/c/platform/prebuilts/vndk/v28/+/1109518
