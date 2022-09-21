@@ -33,6 +33,9 @@
     
     <!-- Smart replies in notifications: Whether we disable the feature unless the app targets P -->
     <bool name="config_smart_replies_in_notifications_requires_targeting_p">false</bool>
+    
+    <!-- Flag to enable privacy dot views, it shall be true for normal case -->
+    <bool name="config_enablePrivacyDot">false</bool>
 
 </resources>
 
