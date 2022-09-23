@@ -348,5 +348,8 @@
         <item>org.lineageos.aperture.dev</item>
         <item>org.pixelexperience.faceunlock</item>
     </string-array>
-    
+
+    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">60</integer>
+
 </resources>
