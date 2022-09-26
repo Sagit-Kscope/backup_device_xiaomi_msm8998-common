@@ -201,10 +201,6 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     android.hardware.renderscript@1.0-impl
 
-PRODUCT_PACKAGES += \
-    vendor.display.config@2.0 \
-    vendor.display.config@2.0.vendor
-
 # Doze
 PRODUCT_PACKAGES += \
     XiaomiDoze \
