@@ -51,4 +51,5 @@ EXTRA_VENDOR_LIBRARIES_64 := \
     libaudiopolicy \
     libmediametrics \
     libmediautils \
-    libnblog
+    libnblog \
+    packagemanager_aidl-cpp
