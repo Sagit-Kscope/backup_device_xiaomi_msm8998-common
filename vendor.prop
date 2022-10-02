@@ -98,6 +98,9 @@ vendor.display.perf_hint_window=50
 vendor.display.use_smooth_motion=1
 vendor.gralloc.enable_fb_ubwc=1
 
+# HEH filename encryption is being dropped
+ro.crypto.volume.filenames_mode=aes-256-cts
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.perf.scroll_opt=true
