@@ -184,6 +184,7 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     libdisplayconfig.qti.vendor \
     libqdMetaData \
+    libqdMetaData.system \
     libqdMetaData.vendor \
     libtinyxml
 
@@ -295,9 +296,7 @@ include vendor/xiaomi/msm8998-common-extra/ifaa.mk
 PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml \
-    libgui_shim \
-    libshim_gui \
-    libshim_imsvt
+    libgui_shim
 
 PRODUCT_PACKAGES += \
     libavservices_minijail.vendor

@@ -68,12 +68,8 @@ function blob_fixup() {
         done
         ;;
     system_ext/lib64/lib-imsvideocodec.so)
-        for LIBGUI_SHIM in $(grep -L "libshim_gui.so" "${2}"); do
-            "${PATCHELF}" --add-needed "libshim_gui.so" "${LIBGUI_SHIM}"
-        done
-        for LIBDPM_SHIM in $(grep -L "libshim_imsvt.so" "${2}"); do
-            "${PATCHELF}" --add-needed "libshim_imsvt.so" "$LIBDPM_SHIM"
-        done
+        "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
+        "${PATCHELF}" --replace-needed "libqdMetaData.so" "libqdMetaData.system.so" "${2}"
         ;;
     vendor/lib/hw/camera.msm8998.so)
         "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
