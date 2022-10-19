@@ -159,7 +159,7 @@
     </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.imscmservice</name>
-        <version>2.2</version>
+        <version>2.0</version>
         <interface>
             <name>IImsCmService</name>
             <instance>qti.ims.connectionmanagerservice</instance>
@@ -167,7 +167,7 @@
     </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.uceservice</name>
-        <version>2.0-3</version>
+        <version>2.0</version>
         <interface>
             <name>IUceService</name>
             <instance>com.qualcomm.qti.uceservice</instance>
@@ -385,28 +385,12 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.ims.callinfo</name>
-        <version>1.0</version>
-        <interface>
-            <name>IService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.ims.factory</name>
         <transport>hwbinder</transport>
         <version>1.0-1</version>
         <interface>
             <name>IImsFactory</name>
             <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.imsrtpservice</name>
-        <version>3.0</version>
-        <interface>
-            <name>IRTPService</name>
-            <instance>imsrtpservice</instance>
         </interface>
     </hal>
     <hal format="hidl">
