@@ -26,10 +26,11 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.fflag.override.settings_network_and_internet_v2=true \
     persist.sys.fflag.override.settings_provider_model=false \
     il.subscription.types=NV,RUIM \
+    ro.com.android.dataroaming=false \
     ro.telephony.call_ring.multiple=false \
     ro.telephony.default_cdma_sub=0 \
     ro.telephony.default_network=22,20 \
-    telephony.lteOnCdmaDevice=1 \
+    telephony.lteOnCdmaDevice=1
 
 # RCS
 PRODUCT_SYSTEM_PROPERTIES += \
