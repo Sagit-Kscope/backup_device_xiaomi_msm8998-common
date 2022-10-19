@@ -318,6 +318,11 @@
         <fqname>@1.1::IImsFactory/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.imsrtpservice</name>
+        <transport>hwbinder</transport>
+        <fqname>@3.0::IRTPService/imsrtpservice</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.xiaomi.hardware.mlipay</name>
         <transport>hwbinder</transport>
         <fqname>@1.1::IMlipayService/default</fqname>
