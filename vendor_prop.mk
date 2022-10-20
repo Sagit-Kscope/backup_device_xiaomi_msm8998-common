@@ -98,7 +98,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.qcom.bluetooth.soc=cherokee \
+    persist.vendor.qcom.bluetooth.soc=cherokee \
     bluetooth.device.class_of_device=90,2,12 \
     bluetooth.hardware.power.operating_voltage_mv=3300 \
     bluetooth.profile.asha.central.enabled?=true \
