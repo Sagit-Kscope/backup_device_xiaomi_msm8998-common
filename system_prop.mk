@@ -53,12 +53,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.data.iwlan.enable=true \
     persist.vendor.data.mode=concurrent
     
-# VoLTE
-PRODUCT_SYSTEM_PROPERTIES += \
-    persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1 \
-    persist.dbg.wfc_avail_ovr=1
-    
 # TimeService
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.timed.enable=true
