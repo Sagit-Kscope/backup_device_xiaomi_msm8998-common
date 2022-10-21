@@ -1,11 +1,3 @@
-# Alarm - from QKQ1.190910.002 V11.0.4.0.QDIMIXM
--product/app/PowerOffAlarm/PowerOffAlarm.apk|1c60ce2d54b55a2afe401f15337973a219c869c7
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|faccc2a7d94d486c2f61a5fe85f5c4598b4147a7
-vendor/bin/power_off_alarm|9f800336a28ad1ad111f164b8c779313cddc98c1
-vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|1e2631850cc97dfedbde50a9d0d55c8d14881b44
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so|271f85f1c6dc0c65dc3aa9a8603f3910fa50e1ea
-
 # ANT+ - from sld_sprout RKQ1.210607.001-00WW_3_490
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|87dc1a131534659173e71e108e7a3ffe6325845f
 
@@ -270,6 +262,14 @@ vendor/lib64/libpdnotifier.so|8e7b07e2b16c3931b93605deb38f2452ff57037b
 vendor/bin/pm-proxy|42383b9163716d8e6d81f0516e9cf09f22ea8b06
 vendor/bin/pm-service|b0a5d3491615ef9a237d93a393082105e3c0097c
 vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
+
+# Power-off alarm - from caymanslm - SKQ1.211103.001
+product/app/PowerOffAlarm/PowerOffAlarm.apk:system_ext/app/PowerOffAlarm/PowerOffAlarm.apk|f0a86fc11b38c059912303857bc4c79155430bcc
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|37b4999095331f4f3dd6c118ee0bdea4bdf7f003
+vendor/bin/power_off_alarm|04e651db91ca2598f1bf50453fdb49a63463b2dc
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|f2b57130987c65a1dc596bf83a2b09e086df9286
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|74675e4f720d75db031a0db4ca21463ebd331f34
 
 # QMI - from LA.UM.9.2.r1-03500-SDMxx0.0
 etc/permissions/privapp-permissions-qti.xml|891d1a265edc7b5e1aec6f653c72eaa08b50fac7
