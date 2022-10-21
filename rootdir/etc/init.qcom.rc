@@ -204,6 +204,9 @@ on boot
     start vendor.qcrild
     start vendor.qcrild2
     
+    # default country code
+    setprop ro.boot.wificountrycode 00
+    
 on property:sys.boot_completed=1
     # Used by sound trigger HAL
     chown media audio /sys/kernel/wdsp0/boot
