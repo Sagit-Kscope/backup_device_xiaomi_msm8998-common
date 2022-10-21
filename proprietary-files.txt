@@ -191,24 +191,14 @@ vendor/lib/soundfx/libdirac.so|f63826a905b520fa524e4c1b147be7cf65240953
 vendor/lib64/hw/gatekeeper.msm8998.so
 
 # GPS
-vendor/bin/loc_launcher
-vendor/bin/lowi-server
-vendor/bin/xtra-daemon
-vendor/lib64/libdataitems.so
-vendor/lib64/libDRPlugin.so
-vendor/lib64/libdrplugin_client.so
-vendor/lib64/libevent_observer.so
-vendor/lib64/libflp.so
-vendor/lib64/libgeofence.so
-vendor/lib64/libizat_client_api.so
-vendor/lib64/libizat_core.so
-vendor/lib64/liblbs_core.so
-vendor/lib64/libloc_api_v02.so
-vendor/lib64/libloc_ds_api.so
-vendor/lib64/liblowi_client.so
-vendor/lib64/libulp2.so
-vendor/lib64/libxtadapter.so
-vendor/lib64/libxtwifi_ulp_adaptor.so
+?vendor/lib64/libDRPlugin.so
+?vendor/lib64/libdrplugin_client.so
+?vendor/lib64/libevent_observer.so
+?vendor/lib64/libflp.so
+?vendor/lib64/libgeofence.so
+?vendor/lib64/libloc_ds_api.so
+?vendor/lib64/libulp2.so
+?vendor/lib64/libxtwifi_ulp_adaptor.so
 
 # Graphics firmware
 vendor/firmware/a530_pfp.fw

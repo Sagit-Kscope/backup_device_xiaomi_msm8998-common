@@ -64,6 +64,22 @@
             <instance>clearkey</instance>
         </interface>
     </hal>
+    <hal format="hidl">
+        <name>android.hardware.gnss</name>
+        <version>1.0</version>
+        <interface>
+            <name>IGnss</name>
+            <instance>gnss_vendor</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.gnss</name>
+        <version>2.1</version>
+        <interface>
+            <name>IGnss</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="aidl">
         <name>android.hardware.power</name>
         <version>1</version>
@@ -203,6 +219,38 @@
         <interface>
             <name>IFactory</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.gnss</name>
+        <version>1.2</version>
+        <interface>
+            <name>ILocHidlGnss</name>
+            <instance>gnss_vendor</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.gnss</name>
+        <version>2.1</version>
+        <interface>
+            <name>ILocHidlGnss</name>
+            <instance>gnss_vendor</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.gnss</name>
+        <version>3.0</version>
+        <interface>
+            <name>ILocHidlGnss</name>
+            <instance>gnss_vendor</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.gnss</name>
+        <version>4.0</version>
+        <interface>
+            <name>ILocHidlGnss</name>
+            <instance>gnss_vendor</instance>
         </interface>
     </hal>
     <hal format="hidl">
