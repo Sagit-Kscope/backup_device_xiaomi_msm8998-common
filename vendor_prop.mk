@@ -99,22 +99,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.qcom.bluetooth.soc=cherokee \
-    bluetooth.device.class_of_device=90,2,12 \
-    bluetooth.hardware.power.operating_voltage_mv=3300 \
-    bluetooth.profile.asha.central.enabled?=true \
-    bluetooth.profile.a2dp.source.enabled?=true \
-    bluetooth.profile.avrcp.target.enabled?=true \
-    bluetooth.profile.bas.client.enabled?=true \
-    bluetooth.profile.gatt.enabled?=true \
-    bluetooth.profile.hfp.ag.enabled?=true \
-    bluetooth.profile.hid.device.enabled?=true \
-    bluetooth.profile.hid.host.enabled?=true \
-    bluetooth.profile.map.server.enabled?=true \
-    bluetooth.profile.opp.enabled?=true \
-    bluetooth.profile.pan.nap.enabled?=true \
-    bluetooth.profile.pan.panu.enabled?=true \
-    bluetooth.profile.pbap.server.enabled?=true \
-    bluetooth.profile.sap.server.enabled?=true
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -127,7 +111,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.set.afd=4 \
     vidc.enc.dcvs.extra-buff-count=2 \
     camera.shutter_sound.blacklist=com.android.camera \
-    vendor.camera.aux.packagelist=com.android.camera,org.lineageos.snap \
     vendor.camera.hal1.packagelist=com.android.camera \
     persist.camera.privapp.list=com.android.camera,com.google.android.GoogleCamera,org.lineageos.snap
 
@@ -239,6 +222,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.service.qti.ims.enabled=1 \
     vendor.voice.path.for.pcm.voip=true
 
+# RCS
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.rcs.supported=1
+
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sdk.sensors.gestures=false \
@@ -275,6 +262,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.binary_xml=false
 
+# VoLTE
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.qti.telephony.vt_cam_interface=1
+
 # WFD
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.virtual=0
@@ -282,8 +273,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wlan
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
-    
-# Volte
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.qti.telephony.vt_cam_interface=1
-
