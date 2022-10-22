@@ -415,7 +415,6 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
-    init.class_main.sh \
     init.panel_info.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
