@@ -219,6 +219,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.report_codec=1 \
     persist.vendor.radio.sib16_support=1 \
+    ro.telephony.block_binder_thread_on_incoming_calls=false \
     vendor.service.qti.ims.enabled=1 \
     vendor.voice.path.for.pcm.voip=true
 
