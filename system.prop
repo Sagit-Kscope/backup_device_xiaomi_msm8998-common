@@ -22,7 +22,6 @@ persist.camera.set.afd=4
 persist.camera.stats.test=5
 persist.camera.xm.green.b=0.96
 persist.camera.xm.green.r=0.97
-vendor.camera.aux.packagelist=com.android.camera,org.lineageos.snap,org.pixelexperience.faceunlock
 vidc.enc.dcvs.extra-buff-count=2
 
 # Charger
