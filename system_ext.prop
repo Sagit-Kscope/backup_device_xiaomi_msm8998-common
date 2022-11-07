@@ -1,0 +1,7 @@
+#
+# system_ext props for MSM8998
+#
+
+# DPM
+persist.vendor.dpm.feature=1
+persist.vendor.dpm.nsrm.bkg.evt=3955
