@@ -1,0 +1,14 @@
+[
+  {
+    "repository": "Sagit-Kscope/kernel_xiaomi_msm8998",
+    "target_path": "kernel/xiaomi/msm8998",
+    "branch": "thirteen-plus",
+    "remote": "github"
+  },
+  {
+    "repository": "Panchajanya1999/azure-clang",
+    "target_path": "prebuilts/clang/host/linux-x86/clang-azure",
+    "branch": "main",
+    "remote": "gitlab"
+  }
+]
