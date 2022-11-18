@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2013-2016 The CyanogenMod Project
+            (C) 2017 The LineageOS Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Dirac settings -->
+	<string name="dirac_title">Mi ses güçlendirici</string>
+    <string name="dirac_summary">Ses kalitesini optimize edin</string>
+    <string name="dirac_headset_title">Kulaklık türünü seçin</string>
+    <string name="dirac_preset_title">Bir hazır ayar seçin</string>
+
+    <!-- Dirac settings: Headset types -->
+	<string name="dirac_headset_default">Varsayılan</string>
+    <string name="dirac_headset_earbuds">Mi kulaklıklar</string>
+    <string name="dirac_headset_in_ear_2013">Mi kulak içi (2013)</string>
+    <string name="dirac_headset_piston_1">Mi piston 1</string>
+    <string name="dirac_headset_general">Genel</string>
+    <string name="dirac_headset_general_inear">Genel kulak içi</string>
+    <string name="dirac_headset_piston_basic">Temel sürüm</string>
+    <string name="dirac_headset_piston_2">Mi piston 2</string>
+    <string name="dirac_headset_piston_standard">Standart sürüm</string>
+    <string name="dirac_headset_headphone">Mi kulaklıklar</string>
+    <string name="dirac_headset_piston_youth">Gençlik sürümü</string>
+    <string name="dirac_headset_piston_color">Renkli sürüm</string>
+    <string name="dirac_headset_in_ear">Mi kulak içi</string>
+    <string name="dirac_headset_capsule">Mi kapsül</string>
+    <string name="dirac_headset_in_ear_pro">Mi kulak içi Pro</string>
+    <string name="dirac_headset_comfort">Mi komfor</string>
+    <string name="dirac_headset_reduction_noise">Mi gürültü önleyici (Type-C)</string>
+    <string name="dirac_headset_cancelling">Mi gürültü engelleme (3,5 mm)</string>
+    <string name="dirac_headset_half_in_ear">Mi yarım kulak içi</string>
+    <string name="dirac_headset_in_ear2">Mi kulak içi 2</string>
+    <string name="dirac_headset_earphone_basic">Mi kulaklık temel</string>
+    <string name="dirac_headset_earphone">Mi kulaklıklar</string>
+
+    <!-- Dirac settings: Equalizer presets -->
+	<string name="dirac_preset_default">Varsayılan</string>
+    <string name="dirac_preset_rock">Kaya</string>
+    <string name="dirac_preset_jazz">Caz</string>
+    <string name="dirac_preset_pop">Pop</string>
+    <string name="dirac_preset_classical">Klasik</string>
+    <string name="dirac_preset_hiphop">Hip Hop</string>
+    <string name="dirac_preset_blues">Maviler</string>
+    <string name="dirac_preset_electronic">Elektronik</string>
+    <string name="dirac_preset_country">Ülke</string>
+    <string name="dirac_preset_dance">Dans</string>
+    <string name="dirac_preset_metal">Metal</string>
+
+    <!-- QS tile title -->
+    <string name="dirac_qs_tile_title">Mi ses</string>
+
+    <!-- Switch  -->
+    <string name="switch_bar_on">Açık</string>
+    <string name="switch_bar_off">Kapalı</string>
+</resources>
