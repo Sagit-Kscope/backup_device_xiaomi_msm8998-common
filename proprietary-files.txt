@@ -21,19 +21,34 @@ vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib/rfsa/adsp/libvpp_frc.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 
-# Audio libraries
-vendor/lib/libacdb-fts.so
-vendor/lib/libacdbloader.so
-vendor/lib/libacdbrtac.so
-vendor/lib/libadiertac.so
-vendor/lib/libadm.so
-vendor/lib/libaudcal.so
-vendor/lib/libhwdaphal.so
-vendor/lib/libqtigef.so
-vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcreverb.so
-vendor/lib/soundfx/libqcvirt.so
+# Audio libraries - from mata-user-10-QQ1A.200105.032-540-release-keys
+vendor/lib/libacdb-fts.so|2ede02d30ef7aecd0de31692b3389d222069cc32
+vendor/lib/libacdbloader.so|36f19adf874598443b3ccac8c1cba088f82526c6
+vendor/lib/libacdbmapper.so|240ec63b9eef44735e7995f801cdca15f191fb01
+vendor/lib/libacdbrtac.so|678fcaa499d90987d776ba99bd3d73c92202fc71
+vendor/lib/libadiertac.so|684d5f99b29ac73e95205796f08d0011ce1ab4ed
+vendor/lib/libadm.so|dd7d9ec59f61a11cd49da046eaab660443b0ac80
+vendor/lib/libaudcal.so|cbbc19e89b1fd29cc557ea6263424df06d732cad
+vendor/lib/libaudioalsa.so|628d4a56a21c1060e60a873a2df41500929a64c7
+vendor/lib/libqtigef.so|73d54e7ecc217d9c99b9f7042f68b12b79786129
+vendor/lib/soundfx/libasphere.so|30e163c2060b21ddc090263d4cedcff47e560477
+vendor/lib/soundfx/libqcbassboost.so|2e3fe1f8c8825ec32a06488ead143f2d7dac1e8b
+vendor/lib/soundfx/libqcreverb.so|d0ff34c11eb058088a80d9b971bb720bd76e4dff
+vendor/lib/soundfx/libqcvirt.so|439db82d83281d521c3cd8a4fd7685ea4defb68d
+vendor/lib/soundfx/libshoebox.so|322653e95a5ef43790b0dc08e18b235b6683323d
+vendor/lib64/libacdb-fts.so|7dd9112682ad6eec6ebc3287a8a6412d64aa7bd4
+vendor/lib64/libacdbloader.so|970b8aedc87ecc4b31f4cebd9a82146e5b16451b
+vendor/lib64/libacdbmapper.so|ea17d8ea10fc1ef331c71f93323f4288bd07ae14
+vendor/lib64/libacdbrtac.so|137bc98aa18c175de86bffc87c17e3fb7f064e24
+vendor/lib64/libadiertac.so|a0a3edef578901b028f078a30c1268e5445f95ee
+vendor/lib64/libaudcal.so|0ada63bcf455b19076c83863d813ca71b00aaee3
+vendor/lib64/libaudioalsa.so|467c19edb4d5543963aa3e652e8fe2989e1388a8
+vendor/lib64/libqtigef.so|1fcc30bcfdd4873caca51e2b63f345f731cc893d
+vendor/lib64/soundfx/libasphere.so|f1c1630ac78353fba6799aec48d7c0b96beb2847
+vendor/lib64/soundfx/libqcbassboost.so|d46435fb75e69068e5520b764b4d56f154daa77a
+vendor/lib64/soundfx/libqcreverb.so|132210eb948021c4e27242ebc109f2abde7265c7
+vendor/lib64/soundfx/libqcvirt.so|17e6cfe2994f2aa539ebaeccb4b407b661ef2a0c
+vendor/lib64/soundfx/libshoebox.so|db7ccb2c98d7b6cdfc88160962305d492c0d8e27
 
 # Camera
 lib/libicuuc.so:vendor/lib/libicuuc-v28.so
