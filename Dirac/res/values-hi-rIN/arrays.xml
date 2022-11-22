@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013-2016 The CyanogenMod Project
+               (C) 2017 The LineageOS Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Dirac settings -->
+    <string name="dirac_title">एमआई साउंड एन्हैन्सर</string>
+    <string name="dirac_summary">ऑडियो गुणवत्ता का अनुकूलन करें</string>
+    <string name="dirac_headset_title">हेडफ़ोन प्रकार चुनें</string>
+    <string name="dirac_preset_title">एक प्रीसेट चुनें</string>
+
+    <!-- Dirac settings: Headset types -->
+    <string name="dirac_headset_default">डिफ़ॉल्ट</string>
+    <string name="dirac_headset_earbuds">एमआई ईयरबड्स</string>
+    <string name="dirac_headset_in_ear_2013">एमआई इन-ईयर (2013)</string>
+    <string name="dirac_headset_piston_1">एम आई पिस्टन -1</string>
+    <string name="dirac_headset_general">जनरल</string>
+    <string name="dirac_headset_general_inear">जनरल इन-ईयर</string>
+    <string name="dirac_headset_piston_basic">बेसिक एडिशन</string>
+    <string name="dirac_headset_piston_2">एम आई पिस्टन -2</string>
+    <string name="dirac_headset_piston_standard">स्टेन्डर्ड एडिशन</string>
+    <string name="dirac_headset_headphone">एमआई हेडफ़ोन</string>
+    <string name="dirac_headset_piston_youth">युथ एडिशन</string>
+    <string name="dirac_headset_piston_color">रंग एडिशन</string>
+    <string name="dirac_headset_in_ear">एमआई इन-ईयर</string>
+    <string name="dirac_headset_capsule">एम आई कैप्सूल</string>
+    <string name="dirac_headset_in_ear_pro">एमआई इन-ईयर प्रो</string>
+    <string name="dirac_headset_comfort">एम आई कम्फर्ट</string>
+    <string name="dirac_headset_reduction_noise">एमआई नॉइज़ कैंसलिंग टाइप-सी</string>
+    <string name="dirac_headset_cancelling">एमआई नॉइज़ कैंसलिंग 3.5mm</string>
+    <string name="dirac_headset_half_in_ear">एमआई हाफ इन-इअर</string>
+    <string name="dirac_headset_in_ear2">एमआई  इन-इअर  2</string>
+    <string name="dirac_headset_earphone_basic">एमआई इयरफ़ोन बेसिक</string>
+    <string name="dirac_headset_earphone">एमआई इयरफ़ोन</string>
+
+    <!-- Dirac settings: Equalizer presets -->
+    <string name="dirac_preset_default">डिफ़ॉल्ट</string>
+    <string name="dirac_preset_rock">रॉक</string>
+    <string name="dirac_preset_jazz">जैज़</string>
+    <string name="dirac_preset_pop">पॉप</string>
+    <string name="dirac_preset_classical">क्लासिकल </string>
+    <string name="dirac_preset_hiphop">हिप हॉप</string>
+    <string name="dirac_preset_blues">ब्लूज</string>
+    <string name="dirac_preset_electronic">इलेक्ट्रोनिक</string>
+    <string name="dirac_preset_country">कंट्री</string>
+    <string name="dirac_preset_dance">डांस</string>
+    <string name="dirac_preset_metal">मेटल</string>
+
+    <!-- QS tile title -->
+    <string name="dirac_qs_tile_title">एम आई साउंड</string>
+
+    <!-- Switch  -->
+    <string name="switch_bar_on">ऑन</string>
+    <string name="switch_bar_off">ऑफ</string>
+</resources>
