@@ -215,15 +215,15 @@ vendor/lib64/hw/gatekeeper.msm8998.so
 ?vendor/lib64/libulp2.so
 ?vendor/lib64/libxtwifi_ulp_adaptor.so
 
-# Graphics firmware
-vendor/firmware/a530_pfp.fw
-vendor/firmware/a530_pm4.fw
-vendor/firmware/a540_gpmu.fw2
-vendor/firmware/a540_zap.b00
-vendor/firmware/a540_zap.b01
-vendor/firmware/a540_zap.b02
-vendor/firmware/a540_zap.elf
-vendor/firmware/a540_zap.mdt
+# Graphics firmware - from LA.UM.9
+vendor/firmware/a530_pfp.fw|35b72dce880191ff087af2524205afce40ea8c97
+vendor/firmware/a530_pm4.fw|b1cf625b5552b99839687f479c124ac5daca2ca2
+vendor/firmware/a540_gpmu.fw2|3530f10b4825a3b08c79e0bcfaf6471ec8422f24
+vendor/firmware/a540_zap.b00|85a7fc0008f9a2071d8b3d0cc212b19141633267
+vendor/firmware/a540_zap.b01|4985db44e30a41c43a790d9284b1a98d4bc0b35f
+vendor/firmware/a540_zap.b02|445160805976753ddeb00325bca27961277d797b
+vendor/firmware/a540_zap.elf|ae074883b91a54611c302ac87b5052f046b17d5b
+vendor/firmware/a540_zap.mdt|2181312ab869e4a790ce0ded92eb5a0f06f77945
 
 # IPA
 vendor/firmware/ipa_fws.b00
