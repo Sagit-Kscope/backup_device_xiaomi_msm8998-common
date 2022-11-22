@@ -331,6 +331,9 @@
 
         <!-- Bluetooth Audio HAL -->
         <xi:include href="/vendor/etc/bluetooth_audio_policy_configuration_7_0.xml"/>
+        
+        <!-- Hearing aid Audio HAL -->
+        <xi:include href="/vendor/etc/hearing_aid_audio_policy_configuration_7_0.xml"/>
 
     </modules>
     <!-- End of Modules section -->
