@@ -123,6 +123,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_USES_MKE2FS := true
+BOARD_USES_METADATA_PARTITION := true
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
