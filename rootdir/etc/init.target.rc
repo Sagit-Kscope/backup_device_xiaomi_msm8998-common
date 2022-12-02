@@ -157,8 +157,6 @@ on fs
     mkdir /mnt/vendor/persist/wlan_bt 0770 system system
 
 on post-fs
-    write /dev/ipa 1
-
     # Wait until TEE is ready
     wait_for_prop vendor.sys.listeners.registered true
     
@@ -272,3 +270,13 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     group system wakelock
     capabilities BLOCK_SUSPEND WAKE_ALARM
     task_profiles ServiceCapacityLow
+
+service vendor.ipastart_sh /vendor/bin/init.qcom.ipastart.sh
+    class main
+    user radio
+    group radio
+    disabled
+    oneshot
+
+on property:vendor.sys.listeners.registered=true
+    start vendor.ipastart_sh

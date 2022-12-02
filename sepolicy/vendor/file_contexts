@@ -52,3 +52,6 @@
 
 # Mutualex service
 /(vendor|system/vendor)/bin/mutualex                          u:object_r:mutualex_exec:s0
+
+# IPA
+/vendor/bin/init\.qcom\.ipastart\.sh                          u:object_r:init-qcom-ipastart-sh_exec:s0
