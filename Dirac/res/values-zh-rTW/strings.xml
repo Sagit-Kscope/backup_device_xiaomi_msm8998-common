@@ -16,51 +16,7 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Dirac settings -->
-    <string name="dirac_title">米音</string>
-    <string name="dirac_summary">最佳化音訊品質</string>
-    <string name="dirac_headset_title">選擇耳機類型</string>
-    <string name="dirac_preset_title">選擇預設音效</string>
-    <!-- Dirac settings: Headset types -->
-    <string name="dirac_headset_default">預設</string>
-    <string name="dirac_headset_earbuds">小米 Earbuds</string>
-    <string name="dirac_headset_in_ear_2013">小米入耳式 (2013)</string>
-    <string name="dirac_headset_piston_1">小米耳機 Mi Piston 1</string>
-    <string name="dirac_headset_general">通用耳塞式</string>
-    <string name="dirac_headset_general_inear">通用入耳式</string>
-    <string name="dirac_headset_piston_basic">小米活塞耳機簡裝版</string>
-    <string name="dirac_headset_piston_2">小米耳機 Mi Piston 2</string>
-    <string name="dirac_headset_piston_standard">小米活塞耳機標準版</string>
-    <string name="dirac_headset_headphone">小米頭戴式</string>
-    <string name="dirac_headset_piston_youth">小米活塞青春版</string>
-    <string name="dirac_headset_piston_color">小米活塞炫彩版</string>
-    <string name="dirac_headset_in_ear">小米圈鐵耳機</string>
-    <string name="dirac_headset_capsule">小米膠囊耳機</string>
-    <string name="dirac_headset_in_ear_pro">小米圈鐵耳機Pro</string>
-    <string name="dirac_headset_comfort">小米頭戴式耳機輕鬆版</string>
-    <string name="dirac_headset_reduction_noise">小米降噪 typeC</string>
-    <string name="dirac_headset_cancelling">小米降噪 3.5mm</string>
-    <string name="dirac_headset_half_in_ear">小米半入耳式</string>
-    <string name="dirac_headset_in_ear2">小米圈鐵2</string>
-    <string name="dirac_headset_earphone_basic">小米耳機基本款</string>
-    <string name="dirac_headset_earphone">小米耳機</string>
-    <!-- Dirac settings: Equalizer presets -->
-    <string name="dirac_preset_default">无</string>
-    <string name="dirac_preset_rock">搖滾</string>
-    <string name="dirac_preset_jazz">爵士</string>
-    <string name="dirac_preset_pop">流行</string>
-    <string name="dirac_preset_classical">古典</string>
-    <string name="dirac_preset_hiphop">嘻哈</string>
-    <string name="dirac_preset_blues">藍調</string>
-    <string name="dirac_preset_electronic">電子音樂</string>
-    <string name="dirac_preset_country">鄉村</string>
-    <string name="dirac_preset_dance">舞曲</string>
-    <string name="dirac_preset_metal">金屬搖滾</string>
-
     <!-- QS tile title -->
     <string name="dirac_qs_tile_title">米音</string>
 
-    <!-- Switch  -->
-    <string name="switch_bar_on">開啟</string>
-    <string name="switch_bar_off">關閉</string>
 </resources>

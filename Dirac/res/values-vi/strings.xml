@@ -16,20 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Dirac settings -->
-    <string name="dirac_title">Tăng cường âm thanh MI</string>
-    <string name="dirac_summary">Tối ưu hóa chất lượng âm thanh</string>
-    <string name="dirac_headset_title">Chọn kiểu tai nghe</string>
-    <string name="dirac_preset_title">Chọn cài đặt có sẵn</string>
-    <!-- Dirac settings: Headset types -->
-    <string name="dirac_headset_default">Mặc định</string>
-    <!-- Dirac settings: Equalizer presets -->
-    <string name="dirac_preset_default">Mặc định</string>
-    
     <!-- QS tile title -->
     <string name="dirac_qs_tile_title">Âm thanh Mi</string>
     
-    <!-- Switch  -->
-    <string name="switch_bar_on">Bật</string>
-    <string name="switch_bar_off">Tắt</string>
 </resources>
