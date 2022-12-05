@@ -29,13 +29,12 @@ import androidx.preference.PreferenceScreen;
 import org.omnirom.device.Preference.ButtonSwapPreference;
 import org.omnirom.device.Preference.FastChargePreference;
 import org.omnirom.device.Preference.S2SVibratorStrengthPreference;
-import org.omnirom.device.Preference.SpectrumPreference;
+import org.omnirom.device.Preference.SpectrumSwitchPreference;
 import org.omnirom.device.Preference.SweepToSleepPreference;
 
 import static org.omnirom.device.Preference.ButtonSwapPreference.BUTTONS_SWAP_KEY;
 import static org.omnirom.device.Preference.FastChargePreference.USB_FAST_CHARGE_KEY;
 import static org.omnirom.device.Preference.S2SVibratorStrengthPreference.KEY_S2S_VIBSTRENGTH;
-import static org.omnirom.device.Preference.SpectrumPreference.SPECTRUM_KEY;
 import static org.omnirom.device.Preference.SweepToSleepPreference.S2S_KEY;
 
 public final class DeviceSettings extends PreferenceFragment {
@@ -56,13 +55,13 @@ public final class DeviceSettings extends PreferenceFragment {
 
         ButtonSwapPreference mButtonSwap = (ButtonSwapPreference) prefSet.findPreference(BUTTONS_SWAP_KEY);
         FastChargePreference mFastCharge = (FastChargePreference) findPreference(USB_FAST_CHARGE_KEY);
-        SpectrumPreference mSpectrum = (SpectrumPreference) findPreference(SPECTRUM_KEY);
+        SpectrumSwitchPreference mSpectrum = (SpectrumSwitchPreference) findPreference(SpectrumSwitchPreference.PREFERENCE_KEY);
         SweepToSleepPreference mSweep = (SweepToSleepPreference) findPreference(S2S_KEY);
         S2SVibratorStrengthPreference mVibratorStrengthS2S = (S2SVibratorStrengthPreference) findPreference(KEY_S2S_VIBSTRENGTH);
 
         mButtonSwap.setEnabled(ButtonSwapPreference.FEATURE.isSupported());
         mFastCharge.setEnabled(FastChargePreference.FEATURE.isSupported());
-        mSpectrum.setEnabled(SpectrumPreference.FEATURE.isSupported());
+        mSpectrum.setEnabled(SpectrumSwitchPreference.FEATURE.isSupported());
         mSweep.setEnabled(SweepToSleepPreference.FEATURE.isSupported());
         mVibratorStrengthS2S.setEnabled(S2SVibratorStrengthPreference.FEATURE.isSupported());
 

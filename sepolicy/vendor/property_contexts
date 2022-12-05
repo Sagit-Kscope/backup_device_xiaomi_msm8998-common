@@ -56,6 +56,7 @@ sys.panel.                                                    u:object_r:sensors
 
 # Spectrum
 persist.spectrum.profile                                      u:object_r:spectrum_prop:s0
+persist.spectrum.chmod                                        u:object_r:spectrum_prop:s0
 
 # Thermal engine
 persist.sys.thermal.                                          u:object_r:thermal_prop:s0
