@@ -208,6 +208,7 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
+    XiaomiDirac \
     XiaomiDoze \
     XiaomiParts
 
