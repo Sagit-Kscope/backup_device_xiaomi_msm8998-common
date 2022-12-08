@@ -83,6 +83,10 @@ persist.vendor.camera.set.afd=4
 # CNE
 persist.vendor.cne.feature=1
 
+# Core control
+ro.vendor.qti.core_ctl_max_cpu=4
+ro.vendor.qti.core_ctl_min_cpu=0
+
 # Data
 ro.vendor.use_data_netmgrd=true
 persist.vendor.data.iwlan.enable=true
@@ -103,10 +107,6 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.perf.scroll_opt=true
-ro.vendor.qti.core_ctl_max_cpu=4
-ro.vendor.qti.core_ctl_min_cpu=0
-ro.vendor.qti.sys.fw.bg_apps_limit=60
 
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
