@@ -8,6 +8,7 @@ allow hal_power_default device_latency:chr_file rw_file_perms;
 allow hal_power_default input_device:chr_file read;
 allow hal_power_default { sysfs_devfreq sysfs_kgsl }:dir search;
 allow hal_power_default { sysfs_devfreq sysfs_kgsl }:lnk_file r_file_perms;
+allow hal_power_default sysfs_ufs:dir create_dir_perms;
 
 allow hal_power_default {
     sysfs
