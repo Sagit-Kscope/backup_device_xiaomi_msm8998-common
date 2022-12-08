@@ -166,6 +166,10 @@ on boot
     # Load QCACLD WLAN driver
     insmod /vendor/lib/modules/wlan.ko
 
+on property:vendor.post_boot.parsed=1
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+    
 on property:sys.boot_completed=1
     # Enable UFS powersaving
     write /sys/devices/soc/1da4000.ufshc/clkgate_enable 1
@@ -186,7 +190,7 @@ on property:sys.boot_completed=1
     write /dev/cpuset/restricted/cpus 0-3
     write /dev/cpuset/camera-daemon/cpus 0-3
 
-    # Run post poot script
+    # Run post poot script && Enable PowerHAL hint processing
     start vendor.qcom-post-boot
 
 on charger

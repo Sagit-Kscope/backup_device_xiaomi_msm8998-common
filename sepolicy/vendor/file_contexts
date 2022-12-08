@@ -16,6 +16,9 @@
 # Mlipay
 /(vendor|system/vendor)/bin/mlipayd@1\.1                      u:object_r:hal_mlipay_default_exec:s0
 
+# Power HAL
+/vendor/bin/hw/android\.hardware\.power-service\.msm8998-libperfmgr u:object_r:hal_power_default_exec:s0
+
 # Root extra symlink
 /bt_firmware                                                  u:object_r:bt_firmware_file:s0
 /persist                                                      u:object_r:mnt_vendor_file:s0

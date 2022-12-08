@@ -10,14 +10,10 @@ import androidx.preference.SwitchPreference;
 
 import org.omnirom.device.R;
 
-import static org.omnirom.device.Preference.SpectrumPreference.SPECTRUM_SYSTEM_PROPERTY;
-
 public final class SpectrumSwitchPreference extends SwitchPreference implements
         Preference.OnPreferenceChangeListener {
 
-    public static final String PREFERENCE_KEY = "pref_spectrum_enabled";
-
-    private static final String PREFERENCE_SWITCH_OFF = Boolean.FALSE.toString();
+    private static final String PREFERENCE_KEY = "pref_spectrum_enabled";
 
     public static final KernelFeature<Boolean> FEATURE = new KernelFeature<Boolean>() {
 
@@ -28,15 +24,12 @@ public final class SpectrumSwitchPreference extends SwitchPreference implements
 
         @Override
         public Boolean getCurrentValue() {
-            return !PREFERENCE_SWITCH_OFF.equals(SpectrumPreference.FEATURE.getCurrentValue());
+            throw new IllegalStateException();
         }
 
         @Override
         public boolean applyValue(Boolean enabled) {
-            if (!enabled) {
-                SystemProperties.set(SPECTRUM_SYSTEM_PROPERTY, PREFERENCE_SWITCH_OFF);
-            }
-            return true;
+            throw new IllegalStateException();
         }
 
         @Override
@@ -46,10 +39,10 @@ public final class SpectrumSwitchPreference extends SwitchPreference implements
 
         @Override
         public boolean restore(SharedPreferences sp) {
-            if (isEnabled(sp)) {
+            if (SpectrumSwitchPreference.isEnabled(sp)) {
                 return SpectrumPreference.FEATURE.restore(sp);
             } else {
-                return applyValue(false);
+                return true;
             }
         }
     };
@@ -67,14 +60,11 @@ public final class SpectrumSwitchPreference extends SwitchPreference implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         Boolean enabled = (Boolean) newValue;
-        boolean result;
         if (enabled) {
-            result =  SpectrumPreference.restore(getSharedPreferences(), false);
-        } else {
-            result =  FEATURE.applyValue(false);
+            SpectrumPreference.FEATURE.restore(getSharedPreferences());
         }
         notifyDependencyChange(enabled);
-        return result;
+        return true;
     }
 
     public static boolean isEnabled(SharedPreferences sp) {

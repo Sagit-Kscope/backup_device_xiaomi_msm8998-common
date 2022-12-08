@@ -1,2 +1,23 @@
+r_dir_file(hal_power_default, sysfs_graphics)
+
+# Double tap
 allow hal_power_default sysfs_sectouch:dir search;
 allow hal_power_default sysfs_sectouch:file w_file_perms;
+
+allow hal_power_default device_latency:chr_file rw_file_perms;
+allow hal_power_default input_device:chr_file read;
+allow hal_power_default { sysfs_devfreq sysfs_kgsl }:dir search;
+allow hal_power_default { sysfs_devfreq sysfs_kgsl }:lnk_file r_file_perms;
+
+allow hal_power_default {
+    sysfs
+    sysfs_kgsl
+    sysfs_devfreq
+    sysfs_devices_system_cpu
+}:file rw_file_perms;
+
+# To get/set powerhal state property
+set_prop(hal_power_default, power_prop)
+
+# To dump
+allow hal_power_default cgroup:file read;

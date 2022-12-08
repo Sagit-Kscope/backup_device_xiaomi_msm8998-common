@@ -45,8 +45,8 @@ public final class SpectrumPreference extends ListPreference implements
 
     public static final String PREFERENCE_KEY = "spectrum";
 
-    static final String SPECTRUM_DEFAULT_PROFILE = "0";
-    static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
+    private static final String SPECTRUM_DEFAULT_PROFILE = "0";
+    private static final String SPECTRUM_PROPERTY = "vendor.spectrum.profile";
 
     private static final File SPECTRUM_INIT_FILE = new File("/vendor/etc/init/init.spectrum.rc");
     
@@ -59,12 +59,14 @@ public final class SpectrumPreference extends ListPreference implements
 
         @Override
         public String getCurrentValue() {
-            return SystemProperties.get(SPECTRUM_SYSTEM_PROPERTY, SPECTRUM_DEFAULT_PROFILE);
+            return SystemProperties.get(SPECTRUM_PROPERTY, "-1");
         }
 
         @Override
         public boolean applyValue(String newValue) {
-            SystemProperties.set(SPECTRUM_SYSTEM_PROPERTY, newValue);
+            if (getCurrentValue().equals(newValue)) return true;
+
+            SystemProperties.set(SPECTRUM_PROPERTY, newValue);
             return newValue.equals(getCurrentValue());
         }
 
@@ -76,7 +78,8 @@ public final class SpectrumPreference extends ListPreference implements
         @Override
         public boolean restore(SharedPreferences sp) {
             if(!isSupported()) return false;
-            return SpectrumPreference.restore(sp, true);
+            String value = sp.getString(PREFERENCE_KEY, SPECTRUM_DEFAULT_PROFILE);
+            return FEATURE.applyValue(value);
         }
     };
 
@@ -101,13 +104,6 @@ public final class SpectrumPreference extends ListPreference implements
     @Override
     public void onDependencyChanged(Preference dependency, boolean disableDependent) {
         setVisible(!disableDependent);
-    }
-
-    public static boolean restore(SharedPreferences sp, boolean checkEnabled) {
-        if(checkEnabled && !SpectrumSwitchPreference.isEnabled(sp)) return true;
-
-        String value = sp.getString(PREFERENCE_KEY, SPECTRUM_DEFAULT_PROFILE);
-        return FEATURE.applyValue(value);
     }
 
     @Override

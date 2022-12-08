@@ -379,9 +379,12 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2.vendor \
-    android.hardware.power-service \
-    android.hardware.power-service-qti
+    android.hardware.power-service.msm8998-libperfmgr
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/power-libperfmgr/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
+    $(LOCAL_PATH)/power-libperfmgr/powerhint_high.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint_high.json \
+    $(LOCAL_PATH)/power-libperfmgr/powerhint_low.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint_low.json
 
 # Preopt SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
@@ -450,7 +453,9 @@ PRODUCT_PACKAGES += \
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel
 
 # Telephony
 PRODUCT_PACKAGES += \

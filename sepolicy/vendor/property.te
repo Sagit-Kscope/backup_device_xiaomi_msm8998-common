@@ -10,6 +10,9 @@ vendor_public_prop(vendor_fp_prop)
 # mwqem property
 vendor_restricted_prop(vendor_mwqem_prop)
 
+# Power
+vendor_internal_prop(power_prop)
+
 # Sensors
 vendor_internal_prop(sensors_panel_prop)
 

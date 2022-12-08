@@ -2,86 +2,44 @@
 # Ramdisk file for profile based kernel management
 # Implimentation inspired by Franco's fku profiles
 
-# Permission workaround
-on property:persist.spectrum.chmod=1
-   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/*
-   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/*
-   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-   chmod 0644 /sys/devices/system/cpu/cpu0/cpufreq/schedutil/*
-   chmod 0644 /sys/devices/system/cpu/cpu4/cpufreq/schedutil/*
-   chmod 0644 /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
-   chmod 0644 /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
-   chmod 0644 /dev/stune/top-app/schedtune.boost
-
-on property:sys.boot_completed=1
-   # initialization is handle by xiaomi parts now
-   setprop persist.spectrum.profile "false"
-
 # Balance
-on property:persist.spectrum.profile=0
-    setprop persist.spectrum.chmod "1"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "interactive"
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_migration_notif 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay 19000
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 90
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 20000
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 1248000
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "83 1804800:95"
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 19000
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 79000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/ignore_hispeed_on_notif 1
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_sched_load 1
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_migration_notif 1
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay 19000
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 90
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 20000
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 1574400
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy 1
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "83 1939200:90 2016000:95"
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 19000
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis 79000
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/ignore_hispeed_on_notif 1
-
-# Performance
-on property:persist.spectrum.profile=1
-    setprop persist.spectrum.chmod "1"
+on property:vendor.spectrum.profile=0
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "schedutil"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1900800
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2457600
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 5000
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 5000
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 1000
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 1000
+    write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 7
+    write /sys/class/kgsl/kgsl-3d0/max_pwrlevel 1
+    write /dev/stune/top-app/schedtune.boost 1
+    setprop vendor.powerhal.config powerhint.json
+    restart vendor.power-hal-aidl
+
+# Performance
+on property:vendor.spectrum.profile=1
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "schedutil"
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 20000
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 20000
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 825600
-    write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 422400
-    write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 7
+    write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 6
     write /sys/class/kgsl/kgsl-3d0/max_pwrlevel 1
-    write /sys/devices/virtual/thermal/thermal_message/sconfig 1
+    write /dev/stune/top-app/schedtune.boost 5
+    setprop vendor.powerhal.config powerhint_high.json
+    restart vendor.power-hal-aidl
 
 # Battery
-on property:persist.spectrum.profile=2
-    setprop persist.spectrum.chmod "1"
+on property:vendor.spectrum.profile=2
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "schedutil"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1171200
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 300000
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1190400
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 500
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 500
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 10000
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 10000
-    write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 0
-    write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 0
     write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 7
     write /sys/class/kgsl/kgsl-3d0/max_pwrlevel 5
-    write /sys/devices/virtual/thermal/thermal_message/sconfig 2
+    write /dev/stune/top-app/schedtune.boost 1
+    setprop vendor.powerhal.config powerhint_low.json
+    restart vendor.power-hal-aidl
