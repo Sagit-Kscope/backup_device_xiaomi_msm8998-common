@@ -17,12 +17,14 @@
 java_library {
     name: "org.ifaa.android.manager",
     installable: true,
+    libs: [
+        "unsupportedappusage", // for android.compat.annotation.UnsupportedAppUsage
+    ],
     srcs: [
         "src/**/*.java",
         "src/**/I*.aidl",
     ],
-    libs: [
-        "app-compat-annotations",
-        "unsupportedappusage",
-    ],
+    aidl: {
+        local_include_dirs: ["src"],
+    },
 }
